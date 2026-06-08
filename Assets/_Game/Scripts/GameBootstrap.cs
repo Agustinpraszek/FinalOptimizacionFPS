@@ -6,57 +6,70 @@ namespace Game.Core
     /// <summary>
     /// MonoBehaviour #2 (de 3 permitidos). Composition Root.
     /// Único punto con Awake(): crea y CABLEA todo el grafo de objetos a mano.
-    /// Así evitamos Singletons y referencias directas innecesarias: cada clase
-    /// recibe por constructor solo lo que necesita (inyección de dependencias).
+    /// Inyección de dependencias por constructor — sin Singletons, sin FindObjectOfType.
     /// </summary>
     public sealed class GameBootstrap : MonoBehaviour
     {
-        [Header("Zombie (si queda vacío se usa un cubo primitivo)")]
+        [Header("Player — arrastrar el GameObject Player acá")]
+        [SerializeField] GamePlayerBridge _playerBridge;
+
+        [Header("Zombie — vacío = usa un cubo primitivo")]
         [SerializeField] GameObject _zombiePrefab;
 
-        [Header("Objetivo (si queda vacío se crea en el origen)")]
-        [SerializeField] Transform _player;
-
-        [Header("Spawn points (opcional: vacío = anillo alrededor del jugador)")]
+        [Header("Spawn points — vacío = anillo alrededor del jugador")]
         [SerializeField] Transform[] _spawnPoints;
 
-        [Header("Pooling")]
+        [Header("Pool")]
         [SerializeField, Min(1)] int _prewarmCount = 32;
 
-        [SerializeField] WaveSettings _waveSettings = new WaveSettings();
+        [SerializeField] WaveSettings  _waveSettings  = new WaveSettings();
+        [SerializeField] PlayerSettings _playerSettings = new PlayerSettings();
 
-        // Referencias guardadas para que no las recolecte el GC.
+        // Raíces fuertes para que el GC no colecte los POCOs.
         UpdateManager _updateManager;
-        WaveManager _waveManager;
+        WaveManager   _waveManager;
+        PlayerLogic   _playerLogic;
 
         void Awake()
         {
-            EnsurePlayer();
-            GameObject prefab = EnsurePrefab();
+            if (_playerBridge == null)
+            {
+                Debug.LogError("[Bootstrap] Asigná el PlayerBridge en el Inspector.");
+                return;
+            }
 
+            // 1. Update manager (único Update() del juego).
             _updateManager = new GameObject("UpdateManager").AddComponent<UpdateManager>();
 
+            // 2. Pool de zombies.
             Transform poolRoot = new GameObject("ZombiePool").transform;
-            ZombiePool pool = new ZombiePool(prefab, poolRoot, _prewarmCount);
+            ZombiePool pool    = new ZombiePool(EnsurePrefab(), poolRoot, _prewarmCount);
 
-            _waveManager = new WaveManager(pool, _updateManager, _player, _spawnPoints, _waveSettings);
+            // 3. Wave manager (necesita al jugador para seguirlo y hacerle daño).
+            _waveManager = new WaveManager(pool, _updateManager,
+                _playerBridge.transform, _spawnPoints, _waveSettings);
             _updateManager.Register(_waveManager);
-        }
 
-        void EnsurePlayer()
-        {
-            if (_player == null)
-                _player = new GameObject("Player").transform;
+            // 4. Player logic (necesita al wave manager para reportar hits).
+            _playerLogic = new PlayerLogic(
+                _playerBridge.transform,
+                _playerBridge.PlayerCamera.transform,
+                _playerBridge.CharacterController,
+                _waveManager,
+                _playerSettings);
+            _updateManager.Register(_playerLogic);
+
+            // 5. Inyección diferida: wave manager ahora puede dañar al jugador.
+            _waveManager.SetPlayerLogic(_playerLogic);
         }
 
         GameObject EnsurePrefab()
         {
-            if (_zombiePrefab != null)
-                return _zombiePrefab;
+            if (_zombiePrefab != null) return _zombiePrefab;
 
             GameObject cube = GameObject.CreatePrimitive(PrimitiveType.Cube);
             cube.name = "ZombieTemplate";
-            cube.SetActive(false); // queda como plantilla; el pool instancia copias.
+            cube.SetActive(false);
             return cube;
         }
     }
