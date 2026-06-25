@@ -1,19 +1,20 @@
-using System;
 using UnityEngine;
 
 namespace Game.Gameplay
 {
     /// <summary>
-    /// Config del jugador. Serializable para exponerla desde el GameBootstrap
-    /// sin gastar campos extra en el MonoBehaviour.
+    /// Configuración del jugador. ScriptableObject: Assets > Create > Game > Player Settings
     /// </summary>
-    [Serializable]
-    public sealed class PlayerSettings
+    [CreateAssetMenu(menuName = "Game/Player Settings", fileName = "PlayerSettings")]
+    public sealed class PlayerSettings : ScriptableObject
     {
-        [Min(0.1f)] public float MoveSpeed = 5f;
+        [Header("Movement")]
+        [Min(0.1f)]  public float MoveSpeed        = 5f;
         [Min(0.01f)] public float MouseSensitivity = 2f;
-        [Min(0f)]   public float Gravity = 20f;
-        [Min(1f)]   public float ShootRange = 100f;
-        [Min(1)]    public int   MaxHealth = 100;
+        [Min(1)]     public int   MaxHealth        = 100;
+
+        [Header("Projectile")]
+        [Min(1f)]   public float ProjectileSpeed    = 30f;
+        [Min(0.1f)] public float ProjectileLifetime = 4f;
     }
 }

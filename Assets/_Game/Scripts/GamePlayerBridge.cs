@@ -3,27 +3,36 @@ using UnityEngine;
 namespace Game.Core
 {
     /// <summary>
-    /// MonoBehaviour #3 (último de 3 permitidos). Puente fino entre Unity y el POCO PlayerLogic.
-    /// Solo hace dos cosas en Awake(): bloquear el cursor y exponer referencias de componentes.
-    /// Cero lógica de gameplay acá.
+    /// MonoBehaviour #3. Puente entre Unity y los POCOs de gameplay.
+    /// Solo expone referencias — cero lógica acá.
+    ///
+    /// Jerarquía esperada:
+    ///   Player  (Rigidbody + CapsuleCollider + este script)
+    ///   └── CameraPivot  (empty — recibe pitch del script)
+    ///       └── Main Camera
+    ///       └── Arma
+    ///           └── ShootPoint  (empty en la boca del cañón)
     /// </summary>
     public sealed class GamePlayerBridge : MonoBehaviour
     {
-        [SerializeField] Camera _camera;
+        [SerializeField] Transform _cameraPivot;
+        [SerializeField] Camera    _camera;
+        [SerializeField] Transform _shootPoint;
 
-        /// <summary>Asignar en Inspector: la Main Camera como hijo del Player.</summary>
-        public Camera PlayerCamera => _camera;
-        public CharacterController CharacterController { get; private set; }
+        public Transform CameraPivot  => _cameraPivot;
+        public Camera    PlayerCamera => _camera;
+        public Transform ShootPoint   => _shootPoint;
+        public Rigidbody Rigidbody    { get; private set; }
 
         void Awake()
         {
-            CharacterController = GetComponent<CharacterController>();
+            Rigidbody = GetComponent<Rigidbody>();
 
             if (_camera == null)
                 _camera = GetComponentInChildren<Camera>();
 
             Cursor.lockState = CursorLockMode.Locked;
-            Cursor.visible = false;
+            Cursor.visible   = false;
         }
     }
 }
