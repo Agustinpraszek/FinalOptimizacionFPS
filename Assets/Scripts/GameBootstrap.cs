@@ -1,4 +1,6 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public sealed class GameBootstrap : MonoBehaviour
 {
@@ -22,6 +24,8 @@ public sealed class GameBootstrap : MonoBehaviour
     private WaveManager _waveManager;
     private ProjectileSystem _projectileSystem;
     private PlayerLogic _playerLogic;
+
+    private bool _gameOver;
 
     private void Awake()
     {
@@ -64,18 +68,49 @@ public sealed class GameBootstrap : MonoBehaviour
         // Injectamos playerLogic en el waveManager una vez se creo
         _waveManager.SetPlayerLogic(_playerLogic);
 
+        _waveManager.OnVictory += OnGameOver;
+        _playerLogic.OnDeath += OnGameOver;
+
         if (_uiBridge != null)
         {
             // Suscribimos a los eventos de cambio y seteamos los valores base
             _uiBridge.Init(_waveSettings.TotalWaves);
             _waveManager.OnWaveChanged += _uiBridge.SetWave;
             _waveManager.OnEnemyCountChanged += _uiBridge.SetEnemyCount;
+            _waveManager.OnVictory += _uiBridge.ShowVictory;
             _playerLogic.OnHealthChanged += _uiBridge.SetHealth;
+            _playerLogic.OnDeath += _uiBridge.ShowDefeat;
 
             _uiBridge.SetWave(_waveManager.CurrentWave);
             _uiBridge.SetEnemyCount(_waveManager.TotalEnemiesLeft);
             _uiBridge.SetHealth(_playerLogic.Health);
         }
+    }
+
+    private void Update()
+    {
+        var kb = Keyboard.current;
+        if (kb == null) return;
+
+        if (kb.escapeKey.wasPressedThisFrame)
+        {
+#if UNITY_EDITOR
+            UnityEditor.EditorApplication.isPlaying = false;
+#else
+            Application.Quit();
+#endif
+        }
+
+        if (_gameOver && kb.rKey.wasPressedThisFrame)
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        }
+    }
+
+    private void OnGameOver()
+    {
+        _gameOver = true;
+        _updateManager.enabled = false;
     }
 
     private GameObject EnsureZombiePrefab()

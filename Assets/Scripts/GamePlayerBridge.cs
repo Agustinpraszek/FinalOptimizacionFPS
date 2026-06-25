@@ -11,11 +11,10 @@ public sealed class GamePlayerBridge : MonoBehaviour
     public Transform CameraPivot  => _cameraPivot;
     public Camera PlayerCamera => _camera;
     public Transform ShootPoint => _shootPoint;
-    public Rigidbody Rigidbody { get; private set; }
+    public Rigidbody Rigidbody => GetComponent<Rigidbody>();
 
     private void Awake()
     {
-        Rigidbody = GetComponent<Rigidbody>();
         if (_camera == null)
         {
             _camera = GetComponentInChildren<Camera>();

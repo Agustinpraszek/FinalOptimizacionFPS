@@ -23,6 +23,7 @@ public sealed class PlayerLogic : ITickable
     public bool IsDead => _health <= 0;
 
     public event Action<int> OnHealthChanged;
+    public event Action OnDeath;
 
     public PlayerLogic(Transform body, Transform cameraPivot, Transform shootPoint, Rigidbody rb, WaveManager waveManager, ProjectileSystem projectileSystem, PlayerSettings settings)
     {
@@ -52,7 +53,7 @@ public sealed class PlayerLogic : ITickable
     {
         _health = Mathf.Max(0, _health - amount);
         OnHealthChanged?.Invoke(_health);
-        if (IsDead) Debug.Log("[Player] muerto");
+        if (IsDead) OnDeath?.Invoke();
     }
 
     private void HandleLook()

@@ -8,8 +8,8 @@ public sealed class UpdateManager : MonoBehaviour
     // Add/Remove son diferidos para no modificar la lista mientras se itera
 
     private readonly List<ITickable> _tickables = new List<ITickable>(256);
-    private readonly List<ITickable> _toAdd     = new List<ITickable>(64);
-    private readonly List<ITickable> _toRemove  = new List<ITickable>(64);
+    private readonly List<ITickable> _toAdd = new List<ITickable>(64);
+    private readonly List<ITickable> _toRemove = new List<ITickable>(64);
 
     public void Register(ITickable tickable)
     {
