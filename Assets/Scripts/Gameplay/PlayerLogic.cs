@@ -11,6 +11,9 @@ public sealed class PlayerLogic : ITickable
     private readonly Rigidbody _rb;
     private readonly WaveManager _waveManager;
     private readonly ProjectileSystem _projectileSystem;
+    private readonly Animator _pistolAnimator;
+
+    private static readonly int FireHash = Animator.StringToHash("Fire");
 
     private readonly float _moveSpeed;
     private readonly float _mouseSensitivity;
@@ -25,7 +28,7 @@ public sealed class PlayerLogic : ITickable
     public event Action<int> OnHealthChanged;
     public event Action OnDeath;
 
-    public PlayerLogic(Transform body, Transform cameraPivot, Transform shootPoint, Rigidbody rb, WaveManager waveManager, ProjectileSystem projectileSystem, PlayerSettings settings)
+    public PlayerLogic(Transform body, Transform cameraPivot, Transform shootPoint, Rigidbody rb, WaveManager waveManager, ProjectileSystem projectileSystem, PlayerSettings settings, Animator pistolAnimator)
     {
         _body = body;
         _cameraPivot = cameraPivot;
@@ -33,6 +36,7 @@ public sealed class PlayerLogic : ITickable
         _rb = rb;
         _waveManager = waveManager;
         _projectileSystem = projectileSystem;
+        _pistolAnimator = pistolAnimator;
         _moveSpeed = settings.MoveSpeed;
         _mouseSensitivity = settings.MouseSensitivity;
         _health = settings.MaxHealth;
@@ -81,5 +85,6 @@ public sealed class PlayerLogic : ITickable
     {
         if (!Mouse.current.leftButton.wasPressedThisFrame) return;
         _projectileSystem.Fire(_shootPoint.position, _cameraPivot.forward);
+        _pistolAnimator.SetTrigger(FireHash);
     }
 }

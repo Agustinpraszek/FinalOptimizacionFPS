@@ -10,6 +10,7 @@ public sealed class GameBootstrap : MonoBehaviour
     [SerializeField] private GameUIBridge _uiBridge;
     [SerializeField] private GameObject _zombiePrefab;
     [SerializeField] private Transform[] _spawnPoints;
+    [SerializeField] private Animator _pistolAnimator;
 
     [Header("Settings")]
     [SerializeField] private PlayerSettings _playerSettings;
@@ -62,7 +63,8 @@ public sealed class GameBootstrap : MonoBehaviour
             _playerBridge.Rigidbody,
             _waveManager,
             _projectileSystem,
-            _playerSettings);
+            _playerSettings,
+            _pistolAnimator);
         _updateManager.Register(_playerLogic);
 
         // Injectamos playerLogic en el waveManager una vez se creo
