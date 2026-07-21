@@ -20,4 +20,5 @@ MonoBehaviour:
   IsAutomatic: 0
   ProjectileSpeed: 25
   ProjectileLifetime: 2
-  Cost: 400
+  ViewPrefab: {fileID: 896101949215514370, guid: 07ccf6ebaf5a541448f86d394688b3f5,
+    type: 3}

@@ -14,6 +14,7 @@ public sealed class GameBootstrap : MonoBehaviour
     private WaveManager _waveManager;
     private ProjectileSystem _projectileSystem;
     private WeaponSystem _weaponSystem;
+    private WeaponViewBinder _weaponView;
     private PlayerLogic _playerLogic;
     private EconomyService _economy;
     private ShopSystem _shop;
@@ -55,6 +56,7 @@ public sealed class GameBootstrap : MonoBehaviour
         _hud?.SetHealth(_playerLogic.Health);
         _hud?.SetMoney(_economy.Balance);
         _hud?.SetWeapon(_weaponSystem.CurrentWeapon.DisplayName);
+        _weaponView.Show(_weaponSystem.CurrentWeapon);
     }
 
     // Punto único de reparto de lo que deja un enemigo al morir.
@@ -68,6 +70,7 @@ public sealed class GameBootstrap : MonoBehaviour
     private void HandleWeaponChanged(WeaponData weapon)
     {
         _hud?.SetWeapon(weapon.DisplayName);
+        _weaponView.Show(weapon);
     }
 
     private void HandleProjectileImpact(Vector3 point, Vector3 normal)
@@ -118,6 +121,8 @@ public sealed class GameBootstrap : MonoBehaviour
             _config.Weapons,
             projectiles.HitMask,
             projectiles.Radius);
+
+        _weaponView = new WeaponViewBinder(player.WeaponPivot, _config.Weapons);
 
         _playerLogic = new PlayerLogic(player.Body, player.CameraPivot, player.Rigidbody, settings);
 

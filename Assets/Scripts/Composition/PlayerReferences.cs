@@ -11,10 +11,14 @@ public sealed class PlayerReferences
     [SerializeField] private Transform _shootPoint;
     [SerializeField] private Rigidbody _rigidbody;
 
+    [Tooltip("Ancla de los modelos de arma. Va como hijo de CameraPivot en (0,0,0).")]
+    [SerializeField] private Transform _weaponPivot;
+
     public Transform Body => _body;
     public Transform CameraPivot => _cameraPivot;
     public Transform ShootPoint => _shootPoint;
     public Rigidbody Rigidbody => _rigidbody;
+    public Transform WeaponPivot => _weaponPivot;
 
     public bool IsValid(out string error)
     {

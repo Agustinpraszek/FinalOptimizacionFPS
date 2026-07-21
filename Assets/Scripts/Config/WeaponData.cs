@@ -2,6 +2,7 @@ using UnityEngine;
 
 // Un arma. Sumar una es crear otro asset y cargarlo en GameConfig.Weapons.
 // El radio del proyectil y la máscara de impacto son globales y viven en GameConfig.
+// El precio no está acá: vive en el WeaponPurchase que la vende.
 [CreateAssetMenu(menuName = "Game/Weapon Data", fileName = "WeaponData")]
 public sealed class WeaponData : ScriptableObject
 {
@@ -26,6 +27,8 @@ public sealed class WeaponData : ScriptableObject
     [Min(1f)] public float ProjectileSpeed = 30f;
     [Min(0.1f)] public float ProjectileLifetime = 4f;
 
-    [Header("Tienda")]
-    [Min(0)] public int Cost = 0;
+    [Header("Vista")]
+    [Tooltip("Modelo en primera persona. Conserva su posición local, así que el " +
+             "encuadre de cada arma se ajusta desde su propio prefab.")]
+    public GameObject ViewPrefab;
 }
