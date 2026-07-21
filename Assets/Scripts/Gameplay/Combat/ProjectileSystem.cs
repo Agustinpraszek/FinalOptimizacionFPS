@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -5,32 +6,30 @@ using UnityEngine;
 // No conoce al WaveManager ni a los enemigos: al impactar le pregunta al registry
 // quién es el objetivo y le pega vía IDamageable. Sumar entidades dañables nuevas
 // no lo obliga a cambiar.
+// La config llega por disparo, así conviven armas con daño y velocidad distintos.
 public sealed class ProjectileSystem : IUpdatable
 {
     private readonly Pool<Projectile> _pool;
     private readonly UpdateManager _updateManager;
     private readonly IDamageableRegistry _registry;
-    private readonly ProjectileConfig _config;
     private readonly List<Projectile> _active = new List<Projectile>(64);
 
     public int ActiveCount => _active.Count;
 
-    public ProjectileSystem(
-        Pool<Projectile> pool,
-        UpdateManager updateManager,
-        IDamageableRegistry registry,
-        in ProjectileConfig config)
+    // Punto y normal del impacto. Lo consume el VFX; el sistema no sabe quién escucha.
+    public event Action<Vector3, Vector3> OnImpact;
+
+    public ProjectileSystem(Pool<Projectile> pool, UpdateManager updateManager, IDamageableRegistry registry)
     {
         _pool = pool;
         _updateManager = updateManager;
         _registry = registry;
-        _config = config;
     }
 
-    public void Fire(Vector3 origin, Vector3 direction)
+    public void Fire(Vector3 origin, Vector3 direction, in ProjectileConfig config)
     {
         Projectile projectile = _pool.Get();
-        projectile.Spawn(origin, direction, in _config);
+        projectile.Spawn(origin, direction, in config);
 
         _updateManager.Register(projectile);
         _active.Add(projectile);
@@ -59,6 +58,6 @@ public sealed class ProjectileSystem : IUpdatable
         if (_registry.TryResolve(projectile.HitTarget, out IDamageable target))
             target.TakeDamage(projectile.Damage);
 
-        // TODO: spawnear el VFX de impacto en projectile.HitPoint.
+        OnImpact?.Invoke(projectile.HitPoint, projectile.HitNormal);
     }
 }

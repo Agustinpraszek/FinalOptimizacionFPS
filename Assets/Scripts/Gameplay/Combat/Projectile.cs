@@ -20,6 +20,7 @@ public sealed class Projectile : IUpdatable, IPooledView
 
     public GameObject HitTarget { get; private set; }
     public Vector3 HitPoint { get; private set; }
+    public Vector3 HitNormal { get; private set; }
     public int Damage => _config.Damage;
 
     public Projectile(GameObject gameObject)
@@ -34,6 +35,7 @@ public sealed class Projectile : IUpdatable, IPooledView
         _remainingLifetime = config.Lifetime;
         HitTarget = null;
         HitPoint = position;
+        HitNormal = -direction;
         _active = true;
 
         _transform.SetPositionAndRotation(position, Quaternion.LookRotation(direction));
@@ -78,6 +80,7 @@ public sealed class Projectile : IUpdatable, IPooledView
         RaycastHit hit = _hitBuffer[nearest];
         HitTarget = hit.collider.gameObject;
         HitPoint = hit.point;
+        HitNormal = hit.normal;
         _transform.position = origin + direction * hit.distance;
         _active = false;
         return true;

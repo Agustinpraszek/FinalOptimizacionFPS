@@ -18,6 +18,8 @@ public sealed class Zombie : IEnemy
     public bool IsFinished => !_active;
     public bool ReachedTarget { get; private set; }
     public int DamageToPlayer { get; private set; }
+    public int Reward { get; private set; }
+    public Vector3 Position => _transform.position;
 
     public Zombie(GameObject gameObject)
     {
@@ -34,6 +36,7 @@ public sealed class Zombie : IEnemy
         _speed = data.MoveSpeed + context.SpeedBonus;
         _reachRadius = data.ReachRadius;
         DamageToPlayer = data.DamageToPlayer;
+        Reward = data.Reward;
 
         _health.Reset(data.MaxHealth);
         ReachedTarget = false;

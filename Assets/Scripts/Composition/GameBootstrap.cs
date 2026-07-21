@@ -13,7 +13,10 @@ public sealed class GameBootstrap : MonoBehaviour
     private GameFlowSystem _gameFlow;
     private WaveManager _waveManager;
     private ProjectileSystem _projectileSystem;
+    private WeaponSystem _weaponSystem;
     private PlayerLogic _playerLogic;
+    private EconomyService _economy;
+    private VfxSystem _vfx;
     private HudPresenter _hud;
 
     private void Awake()
@@ -27,6 +30,12 @@ public sealed class GameBootstrap : MonoBehaviour
         _gameFlow = new GameFlowSystem(_updateManager);
         _updateManager.Register(_gameFlow, UpdateChannel.Always);
 
+        _economy = new EconomyService(_config.StartingMoney);
+
+        // Los VFX son opcionales: acá solo se avisa qué falta, no se aborta.
+        _config.Vfx?.LogMissing(this);
+        _vfx = new VfxSystem(new GameObject("VfxPool").transform, _updateManager, _config.Vfx);
+
         BuildEnemySide(registry);
         BuildCombatSide(registry);
         BuildHud();
@@ -34,11 +43,38 @@ public sealed class GameBootstrap : MonoBehaviour
 
         // El orden de registro es el orden de ejecución del loop.
         _updateManager.Register(_playerLogic);
+        _updateManager.Register(_weaponSystem);
         _updateManager.Register(_waveManager);
         _updateManager.Register(_projectileSystem);
+        _updateManager.Register(_vfx);
 
         _waveManager.Begin();
         _hud?.SetHealth(_playerLogic.Health);
+        _hud?.SetMoney(_economy.Balance);
+        _hud?.SetWeapon(_weaponSystem.CurrentWeapon.DisplayName);
+    }
+
+    // Punto único de reparto de lo que deja un enemigo al morir.
+    // En la fase de VFX acá se suma el spawn de la partícula de muerte.
+    private void HandleEnemyKilled(EnemyKillInfo info)
+    {
+        _economy.Add(info.Reward);
+        _vfx.Play(_config.Vfx?.EnemyDeath, info.Position, Vector3.up);
+    }
+
+    private void HandleWeaponChanged(WeaponData weapon)
+    {
+        _hud?.SetWeapon(weapon.DisplayName);
+    }
+
+    private void HandleProjectileImpact(Vector3 point, Vector3 normal)
+    {
+        _vfx.Play(_config.Vfx?.Impact, point, normal);
+    }
+
+    private void HandleShotFired(Vector3 origin, Vector3 direction)
+    {
+        _vfx.Play(_config.Vfx?.MuzzleFlash, origin, direction);
     }
 
     private void BuildEnemySide(IDamageableRegistry registry)
@@ -52,37 +88,35 @@ public sealed class GameBootstrap : MonoBehaviour
             _sceneReferences.Player.Body,
             _sceneReferences.EnemySpawnPoints,
             _config.Waves,
-            _config.EnemyTypes[0]);
+            _config.EnemyTypes);
     }
 
     private void BuildCombatSide(IDamageableRegistry registry)
     {
         PlayerSettings settings = _config.Player;
 
+        ProjectileSettings projectiles = _config.Projectiles;
+
         Transform projectileRoot = new GameObject("ProjectilePool").transform;
         var projectilePool = new Pool<Projectile>(
-            _config.ProjectilePrefab,
+            projectiles.Prefab,
             projectileRoot,
-            _config.ProjectilePrewarm,
+            projectiles.PrewarmCount,
             view => new Projectile(view));
 
-        var projectileConfig = new ProjectileConfig(
-            settings.ProjectileSpeed,
-            settings.ProjectileRadius,
-            settings.ProjectileLifetime,
-            settings.ProjectileDamage,
-            settings.ProjectileHitMask);
-
-        _projectileSystem = new ProjectileSystem(projectilePool, _updateManager, registry, in projectileConfig);
+        _projectileSystem = new ProjectileSystem(projectilePool, _updateManager, registry);
 
         PlayerReferences player = _sceneReferences.Player;
-        _playerLogic = new PlayerLogic(
-            player.Body,
-            player.CameraPivot,
+
+        _weaponSystem = new WeaponSystem(
             player.ShootPoint,
-            player.Rigidbody,
+            player.CameraPivot,
             _projectileSystem,
-            settings);
+            _config.Weapons,
+            projectiles.HitMask,
+            projectiles.Radius);
+
+        _playerLogic = new PlayerLogic(player.Body, player.CameraPivot, player.Rigidbody, settings);
 
         // El jugador también es dañable, así cualquier fuente de daño futura lo
         // resuelve sin acoplarse a PlayerLogic.
@@ -100,8 +134,11 @@ public sealed class GameBootstrap : MonoBehaviour
     private void WireEvents()
     {
         _waveManager.OnPlayerReached += _playerLogic.TakeDamage;
+        _waveManager.OnEnemyKilled += HandleEnemyKilled;
         _waveManager.OnVictory += _gameFlow.EndGame;
         _playerLogic.OnDeath += _gameFlow.EndGame;
+        _projectileSystem.OnImpact += HandleProjectileImpact;
+        _weaponSystem.OnShotFired += HandleShotFired;
 
         if (_hud == null) return;
 
@@ -110,6 +147,8 @@ public sealed class GameBootstrap : MonoBehaviour
         _waveManager.OnVictory += _hud.ShowVictory;
         _playerLogic.OnHealthChanged += _hud.SetHealth;
         _playerLogic.OnDeath += _hud.ShowDefeat;
+        _economy.OnBalanceChanged += _hud.SetMoney;
+        _weaponSystem.OnWeaponChanged += HandleWeaponChanged;
     }
 
     private void OnDestroy()
@@ -117,8 +156,11 @@ public sealed class GameBootstrap : MonoBehaviour
         if (_waveManager == null || _playerLogic == null) return;
 
         _waveManager.OnPlayerReached -= _playerLogic.TakeDamage;
+        _waveManager.OnEnemyKilled -= HandleEnemyKilled;
         _waveManager.OnVictory -= _gameFlow.EndGame;
         _playerLogic.OnDeath -= _gameFlow.EndGame;
+        _projectileSystem.OnImpact -= HandleProjectileImpact;
+        _weaponSystem.OnShotFired -= HandleShotFired;
 
         if (_hud == null) return;
 
@@ -127,6 +169,8 @@ public sealed class GameBootstrap : MonoBehaviour
         _waveManager.OnVictory -= _hud.ShowVictory;
         _playerLogic.OnHealthChanged -= _hud.SetHealth;
         _playerLogic.OnDeath -= _hud.ShowDefeat;
+        _economy.OnBalanceChanged -= _hud.SetMoney;
+        _weaponSystem.OnWeaponChanged -= HandleWeaponChanged;
     }
 
     private bool Validate()

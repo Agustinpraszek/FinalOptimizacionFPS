@@ -12,12 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fdf92e8a9334d2442bbbb426e35db1c0, type: 3}
   m_Name: WaveSettings
   m_EditorClassIdentifier: Assembly-CSharp::Game.Gameplay.WaveSettings
-  TotalWaves: 5
-  BaseZombies: 5
-  ZombiesPerWaveIncrement: 3
+  TotalWaves: 8
+  BaseEnemies: 5
+  EnemiesPerWaveIncrement: 3
   SpawnInterval: 0.75
-  ZombieSpeed: 3.5
-  SpeedIncrement: 0.3
-  ReachRadius: 1.5
+  SpeedIncrementPerWave: 0.3
   FallbackSpawnRadius: 15
-  ZombieDamage: 10

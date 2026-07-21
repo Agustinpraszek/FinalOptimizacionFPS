@@ -16,6 +16,22 @@ MonoBehaviour:
   Waves: {fileID: 11400000, guid: 989dbd60194414f49a97944ab8591d84, type: 2}
   EnemyTypes:
   - {fileID: 11400000, guid: cdec42660124b4fff9dbc5bebc3f944d, type: 2}
-  ProjectilePrefab: {fileID: 7280164107709646437, guid: 5d7d8f750c01bef4a98bee60f1dcea81,
-    type: 3}
-  ProjectilePrewarm: 32
+  - {fileID: 11400000, guid: 209067754dc3845b8a0963c5277021a1, type: 2}
+  - {fileID: 11400000, guid: ce48e36cbff7b441a847623e181f8543, type: 2}
+  Weapons:
+  - {fileID: 11400000, guid: 59c8b4c91065f477cab3ebd0fdb8c3df, type: 2}
+  - {fileID: 11400000, guid: e32a021e0791c470bb57d4ae7d65a931, type: 2}
+  - {fileID: 11400000, guid: fca281f41e8f94a5db76c0006e001841, type: 2}
+  Projectiles:
+    Prefab: {fileID: 7280164107709646437, guid: 5d7d8f750c01bef4a98bee60f1dcea81,
+      type: 3}
+    PrewarmCount: 64
+    Radius: 0.1
+    HitMask:
+      serializedVersion: 2
+      m_Bits: 6229
+  Vfx:
+    Impact: {fileID: 0}
+    EnemyDeath: {fileID: 0}
+    MuzzleFlash: {fileID: 0}
+  StartingMoney: 0

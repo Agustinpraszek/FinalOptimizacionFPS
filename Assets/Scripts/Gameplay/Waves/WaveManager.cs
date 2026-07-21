@@ -11,7 +11,7 @@ public sealed class WaveManager : IUpdatable
     private readonly Transform _player;
     private readonly Transform[] _spawnPoints;
     private readonly WaveSettings _settings;
-    private readonly EnemyData _defaultEnemy;
+    private readonly IReadOnlyList<EnemyData> _enemyTypes;
 
     private readonly List<IEnemy> _active = new List<IEnemy>(64);
 
@@ -32,20 +32,23 @@ public sealed class WaveManager : IUpdatable
     // Un enemigo llegó al jugador. Quien escuche decide el efecto.
     public event Action<int> OnPlayerReached;
 
+    // Un enemigo murió. Lo consume la economía y después los VFX.
+    public event Action<EnemyKillInfo> OnEnemyKilled;
+
     public WaveManager(
         EnemySpawnService spawnService,
         UpdateManager updateManager,
         Transform player,
         Transform[] spawnPoints,
         WaveSettings settings,
-        EnemyData defaultEnemy)
+        IReadOnlyList<EnemyData> enemyTypes)
     {
         _spawnService = spawnService;
         _updateManager = updateManager;
         _player = player;
         _spawnPoints = spawnPoints;
         _settings = settings;
-        _defaultEnemy = defaultEnemy;
+        _enemyTypes = enemyTypes;
     }
 
     // Va aparte del constructor para que el bootstrap pueda suscribirse antes de
@@ -93,9 +96,8 @@ public sealed class WaveManager : IUpdatable
 
         _spawnTimer = _settings.SpawnInterval;
 
-        // TODO: definir la composición por oleada. Hoy usa siempre el mismo tipo.
         float speedBonus = (_currentWave - 1) * _settings.SpeedIncrementPerWave;
-        var context = new EnemySpawnContext(NextSpawnPosition(), _player, _defaultEnemy, speedBonus);
+        var context = new EnemySpawnContext(NextSpawnPosition(), _player, PickEnemyType(), speedBonus);
 
         IEnemy enemy = _spawnService.Spawn(in context);
         _updateManager.Register(enemy);
@@ -103,6 +105,36 @@ public sealed class WaveManager : IUpdatable
 
         _pendingToSpawn--;
         OnEnemyCountChanged?.Invoke(TotalEnemiesLeft);
+    }
+
+    // Ruleta por peso entre los tipos ya habilitados para la oleada actual.
+    // Así la dificultad progresa desde los assets, sin tocar código.
+    private EnemyData PickEnemyType()
+    {
+        float totalWeight = 0f;
+        for (int i = 0; i < _enemyTypes.Count; i++)
+        {
+            if (IsUnlocked(_enemyTypes[i])) totalWeight += _enemyTypes[i].SpawnWeight;
+        }
+
+        if (totalWeight <= 0f) return _enemyTypes[0];
+
+        float roll = UnityEngine.Random.Range(0f, totalWeight);
+        for (int i = 0; i < _enemyTypes.Count; i++)
+        {
+            EnemyData type = _enemyTypes[i];
+            if (!IsUnlocked(type)) continue;
+
+            roll -= type.SpawnWeight;
+            if (roll <= 0f) return type;
+        }
+
+        return _enemyTypes[0];
+    }
+
+    private bool IsUnlocked(EnemyData type)
+    {
+        return type != null && type.MinWave <= _currentWave && type.SpawnWeight > 0f;
     }
 
     private void RecycleFinished()
@@ -116,6 +148,8 @@ public sealed class WaveManager : IUpdatable
 
             if (enemy.ReachedTarget)
                 OnPlayerReached?.Invoke(enemy.DamageToPlayer);
+            else
+                OnEnemyKilled?.Invoke(new EnemyKillInfo(enemy.Position, enemy.Reward));
 
             _updateManager.Unregister(enemy);
             _spawnService.Despawn(enemy);

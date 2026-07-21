@@ -30,6 +30,16 @@ public sealed class HudPresenter
         if (_refs.EnemyCountText != null) _refs.EnemyCountText.text = $"ENEMIES  {count}";
     }
 
+    public void SetMoney(int amount)
+    {
+        if (_refs.MoneyText != null) _refs.MoneyText.text = $"$ {amount}";
+    }
+
+    public void SetWeapon(string weaponName)
+    {
+        if (_refs.WeaponText != null) _refs.WeaponText.text = weaponName;
+    }
+
     public void ShowVictory() => ShowOutcome("YOU WON");
 
     public void ShowDefeat() => ShowOutcome("YOU LOSE");
