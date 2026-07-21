@@ -1,53 +1,62 @@
-using System.Collections.Generic;
 using UnityEngine;
 
-
+// Game loop del proyecto y único Update() propio.
+// Maneja registro de sistemas, frecuencia, orden de ejecución y pausa.
+// El orden lo define GameBootstrap con el orden en que registra cada sistema.
 public sealed class UpdateManager : MonoBehaviour
 {
-    // El único Update() del juego, ejecuta el tick de todos los codigos registrados
-    // Add/Remove son diferidos para no modificar la lista mientras se itera
+    private const float SlowChannelInterval = 0.2f;
 
-    private readonly List<ITickable> _tickables = new List<ITickable>(256);
-    private readonly List<ITickable> _toAdd = new List<ITickable>(64);
-    private readonly List<ITickable> _toRemove = new List<ITickable>(64);
+    private readonly UpdateGroup _always = new UpdateGroup(16);
+    private readonly UpdateGroup _gameplay = new UpdateGroup(256);
+    private readonly UpdateGroup _slow = new UpdateGroup(64);
 
-    public void Register(ITickable tickable)
+    private float _slowAccumulator;
+
+    public bool IsPaused { get; private set; }
+
+    public void Register(IUpdatable updatable, UpdateChannel channel = UpdateChannel.Gameplay)
     {
-        if (tickable != null) _toAdd.Add(tickable);
+        GroupOf(channel).Add(updatable);
     }
 
-    public void Unregister(ITickable tickable)
+    public void Unregister(IUpdatable updatable, UpdateChannel channel = UpdateChannel.Gameplay)
     {
-        if (tickable != null) _toRemove.Add(tickable);
+        GroupOf(channel).Remove(updatable);
+    }
+
+    public void SetPaused(bool paused)
+    {
+        IsPaused = paused;
     }
 
     private void Update()
     {
         float deltaTime = Time.deltaTime;
-        FlushPending();
 
-        for (int i = 0; i < _tickables.Count; i++)
-            _tickables[i].Tick(deltaTime);
+        // Always no se frena nunca: acá viven el flujo de partida y el input de menús.
+        _always.Tick(deltaTime);
+
+        if (IsPaused) return;
+
+        _gameplay.Tick(deltaTime);
+
+        _slowAccumulator += deltaTime;
+        if (_slowAccumulator < SlowChannelInterval) return;
+
+        // Se pasa el acumulado y no el delta del frame, para que la lógica lenta
+        // no quede atada al framerate.
+        _slow.Tick(_slowAccumulator);
+        _slowAccumulator = 0f;
     }
 
-    private void FlushPending()
+    private UpdateGroup GroupOf(UpdateChannel channel)
     {
-        if (_toAdd.Count > 0)
+        switch (channel)
         {
-            for (int i = 0; i < _toAdd.Count; i++)
-            {
-                _tickables.Add(_toAdd[i]);
-            }
-            _toAdd.Clear();
-        }
-
-        if (_toRemove.Count > 0)
-        {
-            for (int i = 0; i < _toRemove.Count; i++)
-            {
-                _tickables.Remove(_toRemove[i]);
-            }
-            _toRemove.Clear();
+            case UpdateChannel.Always: return _always;
+            case UpdateChannel.Slow: return _slow;
+            default: return _gameplay;
         }
     }
 }

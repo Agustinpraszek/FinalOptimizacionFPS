@@ -14,5 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Game.Gameplay.PlayerSettings
   MoveSpeed: 5
   MouseSensitivity: 2
-  ShootRange: 100
   MaxHealth: 100
+  ProjectileSpeed: 30
+  ProjectileLifetime: 4
+  ProjectileRadius: 0.1
+  ProjectileDamage: 25
+  ProjectileHitMask:
+    serializedVersion: 2
+    m_Bits: 4181

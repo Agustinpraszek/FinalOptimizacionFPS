@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ed935c12538f4238aa42501e7ec5d71, type: 3}
+  m_Name: GameConfig
+  m_EditorClassIdentifier: Assembly-CSharp::GameConfig
+  Player: {fileID: 11400000, guid: 7593e1cf86840e44096f2ba92ac22fe7, type: 2}
+  Waves: {fileID: 11400000, guid: 989dbd60194414f49a97944ab8591d84, type: 2}
+  EnemyTypes:
+  - {fileID: 11400000, guid: cdec42660124b4fff9dbc5bebc3f944d, type: 2}
+  ProjectilePrefab: {fileID: 7280164107709646437, guid: 5d7d8f750c01bef4a98bee60f1dcea81,
+    type: 3}
+  ProjectilePrewarm: 32

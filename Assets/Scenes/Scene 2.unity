@@ -140,7 +140,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 40534931}
-  - component: {fileID: 40534930}
   m_Layer: 0
   m_Name: UIManager
   m_TagString: Untagged
@@ -148,22 +147,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &40534930
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 40534929}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a6f424de170e9524890fb089c1e55bed, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Game.Core.GameUIBridge
-  _waveText: {fileID: 902225418}
-  _healthText: {fileID: 1584816288}
-  _enemyCountText: {fileID: 1937487856}
-  _outcomeText: {fileID: 1132723697}
 --- !u!4 &40534931
 Transform:
   m_ObjectHideFlags: 0
@@ -2713,7 +2696,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 563072405}
-  - component: {fileID: 563072404}
+  - component: {fileID: 563072407}
+  - component: {fileID: 563072406}
   m_Layer: 0
   m_Name: Bootstrap
   m_TagString: Untagged
@@ -2721,29 +2705,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &563072404
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 563072403}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 438809214b68fcb4794c5b2ee0458694, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Game.Core.GameBootstrap
-  _playerBridge: {fileID: 1585754542}
-  _uiBridge: {fileID: 40534930}
-  _zombiePrefab: {fileID: 6973885182378877357, guid: fef13e1187df48243b6749c8dceb3a46,
-    type: 3}
-  _spawnPoints: []
-  _playerSettings: {fileID: 11400000, guid: 7593e1cf86840e44096f2ba92ac22fe7, type: 2}
-  _waveSettings: {fileID: 11400000, guid: 989dbd60194414f49a97944ab8591d84, type: 2}
-  _zombiePrewarmCount: 32
-  _projectilePrefab: {fileID: 7280164107709646437, guid: 5d7d8f750c01bef4a98bee60f1dcea81,
-    type: 3}
-  _projectilePrewarmCount: 20
 --- !u!4 &563072405
 Transform:
   m_ObjectHideFlags: 0
@@ -2759,6 +2720,43 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &563072406
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 563072403}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b39e6548ac5648349e59e0c5845dcea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SceneReferences
+  _player:
+    _body: {fileID: 1585754546}
+    _cameraPivot: {fileID: 1646002497}
+    _shootPoint: {fileID: 823127232}
+    _rigidbody: {fileID: 1585754541}
+  _hud:
+    _waveText: {fileID: 902225418}
+    _healthText: {fileID: 1584816288}
+    _enemyCountText: {fileID: 1937487856}
+    _outcomeText: {fileID: 1132723697}
+  _enemySpawnPoints: []
+--- !u!114 &563072407
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 563072403}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85a87082dff264aa49f1651f7bb40963, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GameBootstrap
+  _sceneReferences: {fileID: 563072406}
+  _config: {fileID: 11400000, guid: 4807d07c4eb5a459099b547c5e4992c3, type: 2}
 --- !u!1001 &567383539
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7620,9 +7618,8 @@ GameObject:
   - component: {fileID: 1585754545}
   - component: {fileID: 1585754544}
   - component: {fileID: 1585754543}
-  - component: {fileID: 1585754542}
   - component: {fileID: 1585754541}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7656,21 +7653,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 80
   m_CollisionDetection: 0
---- !u!114 &1585754542
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1585754540}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1bd1c5b251e53b74a848c72e165c8bf2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Game.Core.GamePlayerBridge
-  _cameraPivot: {fileID: 1646002497}
-  _camera: {fileID: 1994407940}
-  _shootPoint: {fileID: 823127232}
 --- !u!136 &1585754543
 CapsuleCollider:
   m_ObjectHideFlags: 0
