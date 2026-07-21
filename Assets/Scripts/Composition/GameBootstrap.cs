@@ -15,6 +15,7 @@ public sealed class GameBootstrap : MonoBehaviour
     private ProjectileSystem _projectileSystem;
     private WeaponSystem _weaponSystem;
     private WeaponViewBinder _weaponView;
+    private WeaponRecoilSystem _recoil;
     private PlayerLogic _playerLogic;
     private EconomyService _economy;
     private ShopSystem _shop;
@@ -47,6 +48,7 @@ public sealed class GameBootstrap : MonoBehaviour
         // El orden de registro es el orden de ejecución del loop.
         _updateManager.Register(_playerLogic);
         _updateManager.Register(_weaponSystem);
+        _updateManager.Register(_recoil);
         _updateManager.Register(_waveManager);
         _updateManager.Register(_projectileSystem);
         _updateManager.Register(_vfx);
@@ -71,6 +73,9 @@ public sealed class GameBootstrap : MonoBehaviour
     {
         _hud?.SetWeapon(weapon.DisplayName);
         _weaponView.Show(weapon);
+
+        // Sin esto el arma nueva aparecería torcida, heredando el retroceso de la anterior.
+        _recoil.Reset();
     }
 
     private void HandleProjectileImpact(Vector3 point, Vector3 normal)
@@ -81,6 +86,7 @@ public sealed class GameBootstrap : MonoBehaviour
     private void HandleShotFired(Vector3 origin, Vector3 direction)
     {
         _vfx.Play(_config.Vfx?.MuzzleFlash, origin, direction);
+        _recoil.AddKick(_weaponSystem.CurrentWeapon.Recoil);
     }
 
     private void BuildEnemySide(IDamageableRegistry registry)
@@ -123,6 +129,7 @@ public sealed class GameBootstrap : MonoBehaviour
             projectiles.Radius);
 
         _weaponView = new WeaponViewBinder(player.WeaponPivot, _config.Weapons);
+        _recoil = new WeaponRecoilSystem(player.WeaponPivot);
 
         _playerLogic = new PlayerLogic(player.Body, player.CameraPivot, player.Rigidbody, settings);
 

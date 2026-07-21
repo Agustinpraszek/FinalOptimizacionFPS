@@ -20,5 +20,11 @@ MonoBehaviour:
   IsAutomatic: 1
   ProjectileSpeed: 40
   ProjectileLifetime: 4
+  Recoil:
+    KickUp: 2
+    KickSide: 1
+    MaxOffset: 8
+    RecoverySpeed: 12
+    Snappiness: 25
   ViewPrefab: {fileID: 896101949215514370, guid: a1640f2c97a1e49cf8177d281ca76bac,
     type: 3}

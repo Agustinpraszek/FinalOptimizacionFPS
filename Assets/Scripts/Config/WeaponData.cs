@@ -27,6 +27,9 @@ public sealed class WeaponData : ScriptableObject
     [Min(1f)] public float ProjectileSpeed = 30f;
     [Min(0.1f)] public float ProjectileLifetime = 4f;
 
+    [Header("Retroceso")]
+    public WeaponRecoil Recoil;
+
     [Header("Vista")]
     [Tooltip("Modelo en primera persona. Conserva su posición local, así que el " +
              "encuadre de cada arma se ajusta desde su propio prefab.")]
