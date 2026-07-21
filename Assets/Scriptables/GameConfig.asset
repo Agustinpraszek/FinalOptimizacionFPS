@@ -34,4 +34,9 @@ MonoBehaviour:
     Impact: {fileID: 0}
     EnemyDeath: {fileID: 0}
     MuzzleFlash: {fileID: 0}
-  StartingMoney: 0
+  StartingMoney: 600
+  Shop:
+    InteractDistance: 3.5
+    InteractMask:
+      serializedVersion: 2
+      m_Bits: 6263

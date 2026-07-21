@@ -16,6 +16,7 @@ public sealed class GameBootstrap : MonoBehaviour
     private WeaponSystem _weaponSystem;
     private PlayerLogic _playerLogic;
     private EconomyService _economy;
+    private ShopSystem _shop;
     private VfxSystem _vfx;
     private HudPresenter _hud;
 
@@ -38,6 +39,7 @@ public sealed class GameBootstrap : MonoBehaviour
 
         BuildEnemySide(registry);
         BuildCombatSide(registry);
+        BuildShop();
         BuildHud();
         WireEvents();
 
@@ -47,6 +49,7 @@ public sealed class GameBootstrap : MonoBehaviour
         _updateManager.Register(_waveManager);
         _updateManager.Register(_projectileSystem);
         _updateManager.Register(_vfx);
+        if (_shop != null) _updateManager.Register(_shop);
 
         _waveManager.Begin();
         _hud?.SetHealth(_playerLogic.Health);
@@ -123,6 +126,32 @@ public sealed class GameBootstrap : MonoBehaviour
         registry.Register(player.Body.gameObject, _playerLogic);
     }
 
+    private void BuildShop()
+    {
+        BuyStationSetup[] stations = _sceneReferences.BuyStations;
+        if (stations == null || stations.Length == 0) return;
+
+        // Los puestos mal armados se avisan una vez y se ignoran, en vez de
+        // abortar el arranque del juego.
+        for (int i = 0; i < stations.Length; i++)
+        {
+            if (stations[i] == null || !stations[i].IsValid)
+            {
+                Debug.LogWarning(
+                    $"[Shop] SceneReferences > Buy Stations [{i}] está incompleto " +
+                    "(falta el Collider o el Purchase). Ese puesto no va a funcionar.", this);
+            }
+        }
+
+        var context = new ShopContext(_weaponSystem, _playerLogic);
+        _shop = new ShopSystem(
+            _sceneReferences.Player.CameraPivot,
+            stations,
+            _economy,
+            context,
+            _config.Shop ?? new ShopSettings());
+    }
+
     private void BuildHud()
     {
         HudReferences hudRefs = _sceneReferences.Hud;
@@ -149,6 +178,8 @@ public sealed class GameBootstrap : MonoBehaviour
         _playerLogic.OnDeath += _hud.ShowDefeat;
         _economy.OnBalanceChanged += _hud.SetMoney;
         _weaponSystem.OnWeaponChanged += HandleWeaponChanged;
+
+        if (_shop != null) _shop.OnPromptChanged += _hud.SetShopPrompt;
     }
 
     private void OnDestroy()
@@ -171,6 +202,8 @@ public sealed class GameBootstrap : MonoBehaviour
         _playerLogic.OnDeath -= _hud.ShowDefeat;
         _economy.OnBalanceChanged -= _hud.SetMoney;
         _weaponSystem.OnWeaponChanged -= HandleWeaponChanged;
+
+        if (_shop != null) _shop.OnPromptChanged -= _hud.SetShopPrompt;
     }
 
     private bool Validate()

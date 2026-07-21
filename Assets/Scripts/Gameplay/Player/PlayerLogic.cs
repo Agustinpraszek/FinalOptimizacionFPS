@@ -58,6 +58,17 @@ public sealed class PlayerLogic : IUpdatable, IDamageable
         if (!IsAlive) OnDeath?.Invoke();
     }
 
+    public void Heal(int amount)
+    {
+        if (!IsAlive || amount <= 0) return;
+
+        int healed = Mathf.Min(_maxHealth, _health + amount);
+        if (healed == _health) return;
+
+        _health = healed;
+        OnHealthChanged?.Invoke(_health);
+    }
+
     private void HandleLook()
     {
         Mouse mouse = Mouse.current;

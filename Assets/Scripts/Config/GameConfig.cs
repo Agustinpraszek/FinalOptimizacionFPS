@@ -25,6 +25,7 @@ public sealed class GameConfig : ScriptableObject
 
     [Header("Economía")]
     [Min(0)] public int StartingMoney = 0;
+    public ShopSettings Shop;
 
     public bool IsValid(out string error)
     {

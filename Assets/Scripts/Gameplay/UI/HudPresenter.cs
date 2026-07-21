@@ -1,3 +1,5 @@
+using TMPro;
+
 // Pasa eventos de gameplay a texto en pantalla. No conoce WaveManager ni
 // PlayerLogic, recibe los valores ya resueltos.
 // Los métodos allocan string, pero corren por evento y no por frame.
@@ -13,6 +15,9 @@ public sealed class HudPresenter
 
         if (_refs.OutcomeText != null)
             _refs.OutcomeText.gameObject.SetActive(false);
+
+        if (_refs.ShopPromptText != null)
+            _refs.ShopPromptText.gameObject.SetActive(false);
     }
 
     public void SetWave(int current)
@@ -38,6 +43,19 @@ public sealed class HudPresenter
     public void SetWeapon(string weaponName)
     {
         if (_refs.WeaponText != null) _refs.WeaponText.text = weaponName;
+    }
+
+    // Texto vacío esconde el prompt, así no queda un hueco en pantalla.
+    public void SetShopPrompt(string prompt)
+    {
+        TMP_Text text = _refs.ShopPromptText;
+        if (text == null) return;
+
+        bool hasPrompt = !string.IsNullOrEmpty(prompt);
+        if (hasPrompt) text.text = prompt;
+
+        if (text.gameObject.activeSelf != hasPrompt)
+            text.gameObject.SetActive(hasPrompt);
     }
 
     public void ShowVictory() => ShowOutcome("YOU WON");
