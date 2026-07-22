@@ -93,7 +93,8 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 20201, guid: 0000000000000000f000000000000000, type: 0}
+  m_LightingDataAsset: {fileID: 112000000, guid: a8eb494343cfcb0439c9414494336b73,
+    type: 2}
   m_LightingSettings: {fileID: 4890085278179872738, guid: d7cc054ab7f9a4b4cafba158f8057112,
     type: 2}
 --- !u!196 &4
@@ -1135,6 +1136,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -181.015
       objectReference: {fileID: 0}
+    - target: {fileID: 3599180224555674520, guid: 921f157814f75d84080b421e91acc06a,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 3922365219395681879, guid: 921f157814f75d84080b421e91acc06a,
         type: 3}
       propertyPath: m_Color.b
@@ -1155,10 +1161,30 @@ PrefabInstance:
       propertyPath: m_Intensity
       value: 30
       objectReference: {fileID: 0}
+    - target: {fileID: 3922365219395681879, guid: 921f157814f75d84080b421e91acc06a,
+        type: 3}
+      propertyPath: m_Lightmapping
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3922365219395681879, guid: 921f157814f75d84080b421e91acc06a,
+        type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4544621869252912049, guid: 921f157814f75d84080b421e91acc06a,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 6470658264156812115, guid: 921f157814f75d84080b421e91acc06a,
         type: 3}
       propertyPath: m_Name
       value: Spot Light (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6470658264156812115, guid: 921f157814f75d84080b421e91acc06a,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1424,6 +1450,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -449.427
       objectReference: {fileID: 0}
+    - target: {fileID: 3599180224555674520, guid: 921f157814f75d84080b421e91acc06a,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 3922365219395681879, guid: 921f157814f75d84080b421e91acc06a,
         type: 3}
       propertyPath: m_Color.b
@@ -1439,10 +1470,30 @@ PrefabInstance:
       propertyPath: m_Intensity
       value: 30
       objectReference: {fileID: 0}
+    - target: {fileID: 3922365219395681879, guid: 921f157814f75d84080b421e91acc06a,
+        type: 3}
+      propertyPath: m_Lightmapping
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3922365219395681879, guid: 921f157814f75d84080b421e91acc06a,
+        type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4544621869252912049, guid: 921f157814f75d84080b421e91acc06a,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 6470658264156812115, guid: 921f157814f75d84080b421e91acc06a,
         type: 3}
       propertyPath: m_Name
       value: Spot Light (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6470658264156812115, guid: 921f157814f75d84080b421e91acc06a,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1501,7 +1552,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 261273126}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
   m_Name: 
@@ -1787,7 +1838,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -1967,6 +2018,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -181.015
       objectReference: {fileID: 0}
+    - target: {fileID: 3599180224555674520, guid: 921f157814f75d84080b421e91acc06a,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 3922365219395681879, guid: 921f157814f75d84080b421e91acc06a,
         type: 3}
       propertyPath: m_Color.b
@@ -1982,10 +2038,30 @@ PrefabInstance:
       propertyPath: m_Intensity
       value: 30
       objectReference: {fileID: 0}
+    - target: {fileID: 3922365219395681879, guid: 921f157814f75d84080b421e91acc06a,
+        type: 3}
+      propertyPath: m_Lightmapping
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3922365219395681879, guid: 921f157814f75d84080b421e91acc06a,
+        type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4544621869252912049, guid: 921f157814f75d84080b421e91acc06a,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 6470658264156812115, guid: 921f157814f75d84080b421e91acc06a,
         type: 3}
       propertyPath: m_Name
       value: Spot Light (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6470658264156812115, guid: 921f157814f75d84080b421e91acc06a,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2229,6 +2305,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -181.015
       objectReference: {fileID: 0}
+    - target: {fileID: 3599180224555674520, guid: 921f157814f75d84080b421e91acc06a,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 3922365219395681879, guid: 921f157814f75d84080b421e91acc06a,
         type: 3}
       propertyPath: m_Color.b
@@ -2244,10 +2325,30 @@ PrefabInstance:
       propertyPath: m_Intensity
       value: 30
       objectReference: {fileID: 0}
+    - target: {fileID: 3922365219395681879, guid: 921f157814f75d84080b421e91acc06a,
+        type: 3}
+      propertyPath: m_Lightmapping
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3922365219395681879, guid: 921f157814f75d84080b421e91acc06a,
+        type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4544621869252912049, guid: 921f157814f75d84080b421e91acc06a,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 6470658264156812115, guid: 921f157814f75d84080b421e91acc06a,
         type: 3}
       propertyPath: m_Name
       value: Spot Light (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6470658264156812115, guid: 921f157814f75d84080b421e91acc06a,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2684,7 +2785,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 455922577}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
   m_Name: 
@@ -3229,6 +3330,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -360.9
       objectReference: {fileID: 0}
+    - target: {fileID: 3599180224555674520, guid: 921f157814f75d84080b421e91acc06a,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 3922365219395681879, guid: 921f157814f75d84080b421e91acc06a,
         type: 3}
       propertyPath: m_Color.b
@@ -3244,10 +3350,30 @@ PrefabInstance:
       propertyPath: m_Intensity
       value: 30
       objectReference: {fileID: 0}
+    - target: {fileID: 3922365219395681879, guid: 921f157814f75d84080b421e91acc06a,
+        type: 3}
+      propertyPath: m_Lightmapping
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3922365219395681879, guid: 921f157814f75d84080b421e91acc06a,
+        type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4544621869252912049, guid: 921f157814f75d84080b421e91acc06a,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 6470658264156812115, guid: 921f157814f75d84080b421e91acc06a,
         type: 3}
       propertyPath: m_Name
       value: Spot Light (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6470658264156812115, guid: 921f157814f75d84080b421e91acc06a,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3524,6 +3650,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -360.9
       objectReference: {fileID: 0}
+    - target: {fileID: 3599180224555674520, guid: 921f157814f75d84080b421e91acc06a,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 3922365219395681879, guid: 921f157814f75d84080b421e91acc06a,
         type: 3}
       propertyPath: m_Color.b
@@ -3539,10 +3670,30 @@ PrefabInstance:
       propertyPath: m_Intensity
       value: 30
       objectReference: {fileID: 0}
+    - target: {fileID: 3922365219395681879, guid: 921f157814f75d84080b421e91acc06a,
+        type: 3}
+      propertyPath: m_Lightmapping
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3922365219395681879, guid: 921f157814f75d84080b421e91acc06a,
+        type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4544621869252912049, guid: 921f157814f75d84080b421e91acc06a,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 6470658264156812115, guid: 921f157814f75d84080b421e91acc06a,
         type: 3}
       propertyPath: m_Name
       value: Spot Light (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6470658264156812115, guid: 921f157814f75d84080b421e91acc06a,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3730,7 +3881,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!114 &591569703
 MonoBehaviour:
@@ -3778,7 +3929,7 @@ Light:
   m_InnerSpotAngle: 21.80208
   m_CookieSize2D: {x: 0.5, y: 0.5}
   m_Shadows:
-    m_Type: 0
+    m_Type: 1
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -3811,7 +3962,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 4
+  m_Lightmapping: 2
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -3888,7 +4039,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 592006671}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
   m_Name: 
@@ -4319,7 +4470,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &677382313
 Transform:
@@ -4510,6 +4661,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -181.015
       objectReference: {fileID: 0}
+    - target: {fileID: 3599180224555674520, guid: 921f157814f75d84080b421e91acc06a,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 3922365219395681879, guid: 921f157814f75d84080b421e91acc06a,
         type: 3}
       propertyPath: m_Color.b
@@ -4530,10 +4686,30 @@ PrefabInstance:
       propertyPath: m_Intensity
       value: 30
       objectReference: {fileID: 0}
+    - target: {fileID: 3922365219395681879, guid: 921f157814f75d84080b421e91acc06a,
+        type: 3}
+      propertyPath: m_Lightmapping
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3922365219395681879, guid: 921f157814f75d84080b421e91acc06a,
+        type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4544621869252912049, guid: 921f157814f75d84080b421e91acc06a,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 6470658264156812115, guid: 921f157814f75d84080b421e91acc06a,
         type: 3}
       propertyPath: m_Name
       value: Spot Light (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6470658264156812115, guid: 921f157814f75d84080b421e91acc06a,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4800,6 +4976,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -29.008
       objectReference: {fileID: 0}
+    - target: {fileID: 3599180224555674520, guid: 921f157814f75d84080b421e91acc06a,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 3922365219395681879, guid: 921f157814f75d84080b421e91acc06a,
         type: 3}
       propertyPath: m_Color.b
@@ -4815,10 +4996,30 @@ PrefabInstance:
       propertyPath: m_Intensity
       value: 30
       objectReference: {fileID: 0}
+    - target: {fileID: 3922365219395681879, guid: 921f157814f75d84080b421e91acc06a,
+        type: 3}
+      propertyPath: m_Lightmapping
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3922365219395681879, guid: 921f157814f75d84080b421e91acc06a,
+        type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4544621869252912049, guid: 921f157814f75d84080b421e91acc06a,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 6470658264156812115, guid: 921f157814f75d84080b421e91acc06a,
         type: 3}
       propertyPath: m_Name
       value: Spot Light (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6470658264156812115, guid: 921f157814f75d84080b421e91acc06a,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5287,7 +5488,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -6678,7 +6879,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!114 &1075225512
 MonoBehaviour:
@@ -6726,7 +6927,7 @@ Light:
   m_InnerSpotAngle: 21.80208
   m_CookieSize2D: {x: 0.5, y: 0.5}
   m_Shadows:
-    m_Type: 0
+    m_Type: 1
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -6759,7 +6960,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 4
+  m_Lightmapping: 2
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -8186,7 +8387,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1327025314}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
   m_Name: 
@@ -8533,7 +8734,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!114 &1423298283
 MonoBehaviour:
@@ -8581,7 +8782,7 @@ Light:
   m_InnerSpotAngle: 21.80208
   m_CookieSize2D: {x: 0.5, y: 0.5}
   m_Shadows:
-    m_Type: 0
+    m_Type: 1
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -8614,7 +8815,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 4
+  m_Lightmapping: 2
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -8885,7 +9086,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1518756366}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
   m_Name: 
@@ -10364,7 +10565,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1667678207}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
   m_Name: 
@@ -12226,6 +12427,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -267.501
       objectReference: {fileID: 0}
+    - target: {fileID: 3599180224555674520, guid: 921f157814f75d84080b421e91acc06a,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 3922365219395681879, guid: 921f157814f75d84080b421e91acc06a,
         type: 3}
       propertyPath: m_Color.b
@@ -12241,10 +12447,30 @@ PrefabInstance:
       propertyPath: m_Intensity
       value: 30
       objectReference: {fileID: 0}
+    - target: {fileID: 3922365219395681879, guid: 921f157814f75d84080b421e91acc06a,
+        type: 3}
+      propertyPath: m_Lightmapping
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3922365219395681879, guid: 921f157814f75d84080b421e91acc06a,
+        type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4544621869252912049, guid: 921f157814f75d84080b421e91acc06a,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 6470658264156812115, guid: 921f157814f75d84080b421e91acc06a,
         type: 3}
       propertyPath: m_Name
       value: Spot Light (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6470658264156812115, guid: 921f157814f75d84080b421e91acc06a,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -13182,6 +13408,11 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 8290c716c91fee74faa2bd2490e059a5, type: 2}
+    - target: {fileID: 3599180224555674520, guid: 921f157814f75d84080b421e91acc06a,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 3922365219395681879, guid: 921f157814f75d84080b421e91acc06a,
         type: 3}
       propertyPath: m_Color.b
@@ -13196,6 +13427,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Intensity
       value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 3922365219395681879, guid: 921f157814f75d84080b421e91acc06a,
+        type: 3}
+      propertyPath: m_Lightmapping
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3922365219395681879, guid: 921f157814f75d84080b421e91acc06a,
+        type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4544621869252912049, guid: 921f157814f75d84080b421e91acc06a,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 6185617834204748420, guid: 921f157814f75d84080b421e91acc06a,
         type: 3}
@@ -13216,6 +13462,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Spot Light
+      objectReference: {fileID: 0}
+    - target: {fileID: 6470658264156812115, guid: 921f157814f75d84080b421e91acc06a,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
