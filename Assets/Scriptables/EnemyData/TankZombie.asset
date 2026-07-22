@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0fae83c7b37064439a3474dee15a986a, type: 3}
+  m_Name: TankZombie
+  m_EditorClassIdentifier: Assembly-CSharp::EnemyData
+  Prefab: {fileID: 1133216176056081467, guid: f55e9521b650741dcba051a01fe1a796, type: 3}
+  MaxHealth: 150
+  MoveSpeed: 1
+  DamageToPlayer: 20
+  ReachRadius: 1.7
+  MinWave: 3
+  SpawnWeight: 1
+  Reward: 40
+  PrewarmCount: 6
