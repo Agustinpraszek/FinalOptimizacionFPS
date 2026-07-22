@@ -95,4 +95,5 @@ public sealed class PlayerLogic : IUpdatable, IDamageable
         Vector3 velocity = _rigidbody.linearVelocity;
         _rigidbody.linearVelocity = new Vector3(direction.x, velocity.y, direction.z);
     }
+
 }
