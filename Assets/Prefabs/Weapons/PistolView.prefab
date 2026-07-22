@@ -71,6 +71,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1649845289359015601}
+  - component: {fileID: -540651266421187172}
   m_Layer: 0
   m_Name: PistolView
   m_TagString: Untagged
@@ -95,6 +96,28 @@ Transform:
   - {fileID: 2611186677277387305}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
+--- !u!95 &-540651266421187172
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 896101949215514370}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: 5c9b912eb6b1f6d40bb1984561bc9aad, type: 3}
+  m_Controller: {fileID: 9100000, guid: 0c155d5be562a084d88c8bfbb3e62cbc, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &3445271686980419365
 GameObject:
   m_ObjectHideFlags: 0

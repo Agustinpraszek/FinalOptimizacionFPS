@@ -27,7 +27,7 @@ MonoBehaviour:
     Radius: 0.1
     HitMask:
       serializedVersion: 2
-      m_Bits: 6229
+      m_Bits: 64
   Vfx:
     Impact: {fileID: 0}
     EnemyDeath: {fileID: 0}

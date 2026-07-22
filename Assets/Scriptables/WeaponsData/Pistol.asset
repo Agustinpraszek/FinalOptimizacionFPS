@@ -19,6 +19,12 @@ MonoBehaviour:
   SpreadAngle: 0
   IsAutomatic: 0
   ProjectileSpeed: 30
-  ProjectileLifetime: 4
+  ProjectileLifetime: 2
+  Recoil:
+    KickUp: 5
+    KickSide: 1.5
+    MaxOffset: 10
+    RecoverySpeed: 9
+    Snappiness: 22
   ViewPrefab: {fileID: 896101949215514370, guid: 3b12653a0bf5c4576b34462753c03360,
     type: 3}

@@ -1006,6 +1006,7 @@ GameObject:
   - component: {fileID: 4245896991789085820}
   - component: {fileID: 7785694638492429830}
   - component: {fileID: 4840132861137450613}
+  - component: {fileID: -2810182955752122904}
   m_Layer: 6
   m_Name: Zombie Walk
   m_TagString: Untagged
@@ -1044,7 +1045,7 @@ Animator:
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: ad51d15c442523149b96e2f9f24102b0, type: 3}
   m_Controller: {fileID: 0}
-  m_CullingMode: 1
+  m_CullingMode: 2
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
   m_LinearVelocityBlending: 0
@@ -1076,6 +1077,33 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.55063057, y: 1.5811012, z: 0.7170019}
   m_Center: {x: -0.057673454, y: 0.8073143, z: 0.14149904}
+--- !u!54 &-2810182955752122904
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3578009289619189446}
+  serializedVersion: 5
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &3630971333764795805
 GameObject:
   m_ObjectHideFlags: 0

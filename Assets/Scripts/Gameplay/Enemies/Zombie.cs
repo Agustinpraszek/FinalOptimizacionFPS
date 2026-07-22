@@ -7,6 +7,7 @@ public sealed class Zombie : IEnemy
     private readonly GameObject _gameObject;
     private readonly Transform _transform;
     private readonly EnemyHealth _health = new EnemyHealth();
+    private readonly Rigidbody _rigidbody;
 
     private Transform _target;
     private float _speed;
@@ -25,6 +26,7 @@ public sealed class Zombie : IEnemy
     {
         _gameObject = gameObject;
         _transform = gameObject.transform;
+        _rigidbody = gameObject.GetComponent<Rigidbody>();
     }
 
     public void Spawn(in EnemySpawnContext context)
@@ -70,7 +72,8 @@ public sealed class Zombie : IEnemy
         if (distance <= Mathf.Epsilon) return;
 
         toTarget /= distance; // normaliza sin recalcular la magnitud
-        _transform.position = position + toTarget * (_speed * deltaTime);
+        Vector3 newPosition = position + toTarget * (_speed * deltaTime);
+        _rigidbody.MovePosition(newPosition);
         _transform.forward = toTarget;
     }
 }

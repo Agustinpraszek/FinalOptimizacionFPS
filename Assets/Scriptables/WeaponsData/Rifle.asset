@@ -19,7 +19,7 @@ MonoBehaviour:
   SpreadAngle: 3
   IsAutomatic: 1
   ProjectileSpeed: 40
-  ProjectileLifetime: 4
+  ProjectileLifetime: 1
   Recoil:
     KickUp: 2
     KickSide: 1

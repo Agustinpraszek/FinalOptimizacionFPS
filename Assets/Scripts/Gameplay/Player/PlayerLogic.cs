@@ -77,7 +77,7 @@ public sealed class PlayerLogic : IUpdatable, IDamageable
         Vector2 delta = mouse.delta.ReadValue() * (_mouseSensitivity * 0.1f);
 
         _yaw += delta.x;
-        _body.rotation = Quaternion.Euler(0f, _yaw, 0f);
+        _rigidbody.MoveRotation(Quaternion.Euler(0f, _yaw, 0f));
 
         _pitch = Mathf.Clamp(_pitch - delta.y, -85f, 85f);
         _cameraPivot.localRotation = Quaternion.Euler(_pitch, 0f, 0f);

@@ -18,8 +18,8 @@ MonoBehaviour:
   ProjectilesPerShot: 8
   SpreadAngle: 12
   IsAutomatic: 0
-  ProjectileSpeed: 25
-  ProjectileLifetime: 2
+  ProjectileSpeed: 30
+  ProjectileLifetime: 1.5
   Recoil:
     KickUp: 9
     KickSide: 5
