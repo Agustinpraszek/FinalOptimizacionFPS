@@ -16,8 +16,6 @@ MonoBehaviour:
   Waves: {fileID: 11400000, guid: 989dbd60194414f49a97944ab8591d84, type: 2}
   EnemyTypes:
   - {fileID: 11400000, guid: cdec42660124b4fff9dbc5bebc3f944d, type: 2}
-  - {fileID: 11400000, guid: 209067754dc3845b8a0963c5277021a1, type: 2}
-  - {fileID: 11400000, guid: ce48e36cbff7b441a847623e181f8543, type: 2}
   Weapons:
   - {fileID: 11400000, guid: 59c8b4c91065f477cab3ebd0fdb8c3df, type: 2}
   - {fileID: 11400000, guid: e32a021e0791c470bb57d4ae7d65a931, type: 2}

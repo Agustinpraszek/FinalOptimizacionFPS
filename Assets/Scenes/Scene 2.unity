@@ -13348,11 +13348,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 677382313}
     m_Modifications:
-    - target: {fileID: 760098573320569485, guid: 921f157814f75d84080b421e91acc06a,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -1.25
-      objectReference: {fileID: 0}
     - target: {fileID: 912348998456760745, guid: 921f157814f75d84080b421e91acc06a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -13403,70 +13398,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1403686708903167191, guid: 921f157814f75d84080b421e91acc06a,
-        type: 3}
-      propertyPath: 'm_Materials.Array.data[0]'
-      value: 
-      objectReference: {fileID: 2100000, guid: 8290c716c91fee74faa2bd2490e059a5, type: 2}
-    - target: {fileID: 3599180224555674520, guid: 921f157814f75d84080b421e91acc06a,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
-    - target: {fileID: 3922365219395681879, guid: 921f157814f75d84080b421e91acc06a,
-        type: 3}
-      propertyPath: m_Color.b
-      value: 0.6745098
-      objectReference: {fileID: 0}
-    - target: {fileID: 3922365219395681879, guid: 921f157814f75d84080b421e91acc06a,
-        type: 3}
-      propertyPath: m_Color.g
-      value: 0.9137255
-      objectReference: {fileID: 0}
-    - target: {fileID: 3922365219395681879, guid: 921f157814f75d84080b421e91acc06a,
-        type: 3}
-      propertyPath: m_Intensity
-      value: 30
-      objectReference: {fileID: 0}
-    - target: {fileID: 3922365219395681879, guid: 921f157814f75d84080b421e91acc06a,
-        type: 3}
-      propertyPath: m_Lightmapping
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3922365219395681879, guid: 921f157814f75d84080b421e91acc06a,
-        type: 3}
-      propertyPath: m_Shadows.m_Type
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4544621869252912049, guid: 921f157814f75d84080b421e91acc06a,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
-    - target: {fileID: 6185617834204748420, guid: 921f157814f75d84080b421e91acc06a,
-        type: 3}
-      propertyPath: m_Materials.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6185617834204748420, guid: 921f157814f75d84080b421e91acc06a,
-        type: 3}
-      propertyPath: 'm_Materials.Array.data[0]'
-      value: 
-      objectReference: {fileID: 2100000, guid: 1a087c65608607042accf116f4319d39, type: 2}
-    - target: {fileID: 6185617834204748420, guid: 921f157814f75d84080b421e91acc06a,
-        type: 3}
-      propertyPath: 'm_Materials.Array.data[1]'
-      value: 
-      objectReference: {fileID: 2100000, guid: 1a087c65608607042accf116f4319d39, type: 2}
     - target: {fileID: 6470658264156812115, guid: 921f157814f75d84080b421e91acc06a,
         type: 3}
       propertyPath: m_Name
       value: Spot Light
-      objectReference: {fileID: 0}
-    - target: {fileID: 6470658264156812115, guid: 921f157814f75d84080b421e91acc06a,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

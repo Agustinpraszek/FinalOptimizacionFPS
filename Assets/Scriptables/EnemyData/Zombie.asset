@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0fae83c7b37064439a3474dee15a986a, type: 3}
   m_Name: Zombie
   m_EditorClassIdentifier: Assembly-CSharp::EnemyData
-  Prefab: {fileID: 6973885182378877357, guid: fef13e1187df48243b6749c8dceb3a46, type: 3}
+  Prefab: {fileID: 919132149155446097, guid: ad51d15c442523149b96e2f9f24102b0, type: 3}
   MaxHealth: 50
   MoveSpeed: 2.5
   DamageToPlayer: 10
