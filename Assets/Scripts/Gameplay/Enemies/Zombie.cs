@@ -8,6 +8,7 @@ public sealed class Zombie : IEnemy
     private readonly Transform _transform;
     private readonly EnemyHealth _health = new EnemyHealth();
     private readonly Rigidbody _rigidbody;
+    private readonly Animator _animator;
 
     private Transform _target;
     private float _speed;
@@ -27,6 +28,7 @@ public sealed class Zombie : IEnemy
         _gameObject = gameObject;
         _transform = gameObject.transform;
         _rigidbody = gameObject.GetComponent<Rigidbody>();
+        _animator = gameObject.GetComponentInChildren<Animator>();
     }
 
     public void Spawn(in EnemySpawnContext context)
@@ -43,6 +45,8 @@ public sealed class Zombie : IEnemy
         _health.Reset(data.MaxHealth);
         ReachedTarget = false;
         _active = true;
+
+        if (_animator != null) _animator.speed = 1f;
     }
 
     public void TakeDamage(int amount)
@@ -50,12 +54,25 @@ public sealed class Zombie : IEnemy
         if (!IsAlive) return;
 
         if (_health.TakeDamage(amount))
+        {
             _active = false; // murió con este golpe
+            if (_animator != null) _animator.speed = 0f;
+        }
     }
 
     public void Tick(float deltaTime)
     {
-        if (!IsAlive || _target == null) return;
+        if (!IsAlive || _target == null)
+        {
+            StopMovement();
+            return;
+        }
+
+        // Aseguramos que la animación esté corriendo si el Tick se está ejecutando
+        if (_animator != null && _animator.speed == 0f)
+        {
+            _animator.speed = 1f;
+        }
 
         Vector3 position = _transform.position;
         Vector3 toTarget = _target.position - position;
@@ -66,14 +83,33 @@ public sealed class Zombie : IEnemy
         {
             ReachedTarget = true;
             _active = false;
+            StopMovement();
             return;
         }
 
-        if (distance <= Mathf.Epsilon) return;
+        if (distance <= Mathf.Epsilon)
+        {
+            StopMovement();
+            return;
+        }
 
         toTarget /= distance; // normaliza sin recalcular la magnitud
         Vector3 newPosition = position + toTarget * (_speed * deltaTime);
         _rigidbody.MovePosition(newPosition);
         _transform.forward = toTarget;
+    }
+
+    private void StopMovement()
+    {
+        if (_animator != null)
+        {
+            _animator.speed = 0f;
+        }
+
+        if (_rigidbody != null)
+        {
+            _rigidbody.linearVelocity = Vector3.zero;
+            _rigidbody.angularVelocity = Vector3.zero;
+        }
     }
 }
