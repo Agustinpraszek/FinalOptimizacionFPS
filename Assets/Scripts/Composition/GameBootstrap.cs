@@ -1,9 +1,9 @@
 using UnityEngine;
 
-// Punto de composición. Crea los sistemas, les inyecta las dependencias por
-// constructor, define el orden de ejecución y conecta los eventos.
-// Es el único lugar donde los sistemas se conocen entre sí: ninguno usa Find,
-// singletons ni referencias directas.
+// Punto de composición. Crea los sistemas, les pasa sus dependencias por
+// constructor, define el orden de ejecución y engancha los eventos.
+// El único lugar donde los sistemas se conocen. Nadie usa Find, singletons
+// ni referencias directas.
 public sealed class GameBootstrap : MonoBehaviour
 {
     [SerializeField] private SceneReferences _sceneReferences;
@@ -41,7 +41,7 @@ public sealed class GameBootstrap : MonoBehaviour
 
         _economy = new EconomyService(_config.StartingMoney);
 
-        // Los VFX son opcionales: acá solo se avisa qué falta, no se aborta.
+        // Los VFX son opcionales. Acá solo avisa qué falta, no corta el arranque.
         //_config.Vfx?.LogMissing(this);
         _vfx = new VfxSystem(new GameObject("VfxPool").transform, _updateManager, _config.Vfx);
 
@@ -69,7 +69,7 @@ public sealed class GameBootstrap : MonoBehaviour
     }
 
     // Punto único de reparto de lo que deja un enemigo al morir.
-    // En la fase de VFX acá se suma el spawn de la partícula de muerte.
+    // Acá también sale el spawn de la partícula de muerte.
     private void HandleEnemyKilled(EnemyKillInfo info)
     {
         _economy.Add(info.Reward);
@@ -81,7 +81,7 @@ public sealed class GameBootstrap : MonoBehaviour
         _hud?.SetWeapon(weapon.DisplayName);
         _weaponView.Show(weapon);
 
-        // Sin esto el arma nueva aparecería torcida, heredando el retroceso de la anterior.
+        // Sin esto el arma nueva quedaría torcida, con el retroceso de la anterior.
         _recoil.Reset();
     }
 
@@ -157,8 +157,8 @@ public sealed class GameBootstrap : MonoBehaviour
 
         _playerLogic = new PlayerLogic(player.Body, player.CameraPivot, player.Rigidbody, settings);
 
-        // El jugador también es dañable, así cualquier fuente de daño futura lo
-        // resuelve sin acoplarse a PlayerLogic.
+        // El jugador también es dañable, así cualquier fuente de daño lo afecta
+        // sin acoplarse a PlayerLogic.
         registry.Register(player.Body.gameObject, _playerLogic);
     }
 
@@ -167,8 +167,7 @@ public sealed class GameBootstrap : MonoBehaviour
         BuyStationSetup[] stations = _sceneReferences.BuyStations;
         if (stations == null || stations.Length == 0) return;
 
-        // Los puestos mal armados se avisan una vez y se ignoran, en vez de
-        // abortar el arranque del juego.
+        // Un puesto mal armado se avisa una vez y se ignora, sin frenar el arranque.
         for (int i = 0; i < stations.Length; i++)
         {
             if (stations[i] == null || !stations[i].IsValid)

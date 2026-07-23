@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 // Dispara, recicla y resuelve el daño de los proyectiles.
-// No conoce al WaveManager ni a los enemigos: al impactar le pregunta al registry
-// quién es el objetivo y le pega vía IDamageable. Sumar entidades dañables nuevas
-// no lo obliga a cambiar.
+// No conoce al WaveManager ni a los enemigos. Al impactar le pregunta al registry
+// quién es el objetivo y le pega vía IDamageable, así sumar entidades dañables
+// nuevas no lo obliga a cambiar.
 // La config llega por disparo, así conviven armas con daño y velocidad distintos.
 public sealed class ProjectileSystem : IUpdatable
 {
@@ -16,7 +16,7 @@ public sealed class ProjectileSystem : IUpdatable
 
     public int ActiveCount => _active.Count;
 
-    // Punto y normal del impacto. Lo consume el VFX; el sistema no sabe quién escucha.
+    // Punto y normal del impacto. Lo consume el VFX. El sistema no sabe quién escucha.
     public event Action<Vector3, Vector3> OnImpact;
 
     public ProjectileSystem(Pool<Projectile> pool, UpdateManager updateManager, IDamageableRegistry registry)

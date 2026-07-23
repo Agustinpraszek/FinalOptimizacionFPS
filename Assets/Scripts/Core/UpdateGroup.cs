@@ -1,7 +1,6 @@
 using System.Collections.Generic;
 
-// Lista de updatables con alta y baja diferida, para no tocar la colección
-// mientras se la está recorriendo.
+// Lista de updatables con alta y baja diferida, así no toco la colección mientras la recorro.
 public sealed class UpdateGroup
 {
     private readonly List<IUpdatable> _items;
@@ -40,9 +39,8 @@ public sealed class UpdateGroup
 
     private void Flush()
     {
-        // Una baja primero cancela un alta pendiente del mismo frame, y recién
-        // ahí toca la lista viva. Así "alta + baja" no deja basura y
-        // "baja + alta" (reuso de pool) no duplica ni pierde el registro.
+        // Una baja cancela primero un alta pendiente del mismo frame antes de tocar
+        // la lista viva. Así el reuso del pool no duplica ni pierde el registro.
         if (_toRemove.Count > 0)
         {
             for (int i = 0; i < _toRemove.Count; i++)

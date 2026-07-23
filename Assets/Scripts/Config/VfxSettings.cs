@@ -2,8 +2,8 @@ using System;
 using UnityEngine;
 using Object = UnityEngine.Object;
 
-// Los tres efectos del juego. Todos son opcionales: si falta alguno el juego
-// corre igual y solo se pierde ese efecto.
+// Los tres efectos del juego. Todos opcionales. Si falta alguno el juego corre
+// igual, solo se pierde ese efecto.
 [Serializable]
 public sealed class VfxSettings
 {

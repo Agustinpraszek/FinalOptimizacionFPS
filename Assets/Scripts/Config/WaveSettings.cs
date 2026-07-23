@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.Serialization;
 
-// Cómo progresan las oleadas. Las stats de cada enemigo van en EnemyData; acá
+// Cómo progresan las oleadas. Las stats de cada enemigo van en EnemyData. Acá
 // solo está lo que cambia de una wave a la otra.
 [CreateAssetMenu(menuName = "Game/Wave Settings", fileName = "WaveSettings")]
 public sealed class WaveSettings : ScriptableObject

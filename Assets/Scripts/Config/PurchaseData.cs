@@ -1,8 +1,7 @@
 using UnityEngine;
 
-// Base de todo lo comprable. Agregar un tipo de compra nuevo (más vida máxima,
-// daño doble, munición) es heredar de acá y crear el asset: el ShopSystem no
-// se entera.
+// Base de todo lo comprable. Agregar un tipo nuevo (más vida máxima, daño doble,
+// munición) es heredar de acá y crear el asset. El ShopSystem no se entera.
 public abstract class PurchaseData : ScriptableObject
 {
     [Tooltip("Solo el nombre del ítem, sin verbo. El 'Buy' lo agrega la tienda " +

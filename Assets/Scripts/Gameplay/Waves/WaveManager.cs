@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 // Ciclo de oleadas: spawn escalonado, reciclado y avance de wave.
-// Trabaja contra IEnemy y publica eventos; no conoce clases concretas ni al jugador.
+// Trabaja contra IEnemy y publica eventos. No conoce clases concretas ni al jugador.
 public sealed class WaveManager : IUpdatable
 {
     private readonly EnemySpawnService _spawnService;
@@ -51,8 +51,8 @@ public sealed class WaveManager : IUpdatable
         _enemyTypes = enemyTypes;
     }
 
-    // Va aparte del constructor para que el bootstrap pueda suscribirse antes de
-    // que se emita el primer evento.
+    // Aparte del constructor, así el bootstrap alcanza a suscribirse antes del
+    // primer evento.
     public void Begin()
     {
         BeginWave(1);

@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 
 // Compras en el mundo, estilo wall buy: apuntás a un puesto y comprás con F.
-// No sabe qué se está comprando: delega en PurchaseData, así sumar tipos de
+// No sabe qué se está comprando, delega en PurchaseData. Así sumar tipos de
 // compra no lo obliga a cambiar.
 public sealed class ShopSystem : IUpdatable
 {
@@ -124,14 +124,14 @@ public sealed class ShopSystem : IUpdatable
         purchase.Apply(_context);
         OnPurchased?.Invoke(purchase);
 
-        // Se fuerza el rearmado del prompt porque el estado cambió.
+        // Rearmo el prompt porque el estado cambió.
         _focused = null;
         RefreshFocus(FindStationInSight());
     }
 
-    // Se chequea todos los frames pero solo se reescribe el TMP cuando el estado
-    // cambió de verdad. Escribir un texto en world space dispara un rebuild del
-    // canvas, así que no conviene hacerlo por frame.
+    // Chequea todos los frames pero reescribe el TMP solo cuando el estado cambió
+    // de verdad. Escribir texto en world space dispara un rebuild del canvas, así
+    // que no conviene hacerlo por frame.
     // El chequeo importa para la cura, que se habilita sola al recibir daño.
     private void RefreshLabels(bool force)
     {
@@ -146,7 +146,7 @@ public sealed class ShopSystem : IUpdatable
             if (!force && canPurchase == _labelState[i]) continue;
             _labelState[i] = canPurchase;
 
-            // El "Buy" es parte de la plantilla, no del nombre: cuando ya no se
+            // El "Buy" es parte de la plantilla, no del nombre. Cuando ya no se
             // puede comprar queda solo el ítem y el motivo.
             station.Label.text = canPurchase
                 ? $"Buy {purchase.DisplayName}\n${purchase.Cost}"

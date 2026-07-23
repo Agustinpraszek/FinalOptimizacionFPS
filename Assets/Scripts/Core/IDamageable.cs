@@ -1,5 +1,5 @@
-// Todo lo que puede recibir daño.
-// Es lo que permite que el sistema de proyectiles no conozca a los enemigos.
+// Todo lo que puede recibir daño. Gracias a esto el sistema de proyectiles
+// no necesita conocer a los enemigos.
 public interface IDamageable
 {
     bool IsAlive { get; }

@@ -1,8 +1,8 @@
 using UnityEngine;
 
-// Game loop del proyecto y único Update() propio.
-// Maneja registro de sistemas, frecuencia, orden de ejecución y pausa.
-// El orden lo define GameBootstrap con el orden en que registra cada sistema.
+// Game loop del juego y único Update() del proyecto.
+// Registra sistemas, controla frecuencia, orden y pausa.
+// El orden de ejecución sale del orden en que los registra GameBootstrap.
 public sealed class UpdateManager : MonoBehaviour
 {
     private const float SlowChannelInterval = 0.2f;
@@ -34,7 +34,7 @@ public sealed class UpdateManager : MonoBehaviour
     {
         float deltaTime = Time.deltaTime;
 
-        // Always no se frena nunca: acá viven el flujo de partida y el input de menús.
+        // Always nunca se frena. Acá va el flujo de partida y el input de menús.
         _always.Tick(deltaTime);
 
         if (IsPaused) return;
@@ -44,8 +44,7 @@ public sealed class UpdateManager : MonoBehaviour
         _slowAccumulator += deltaTime;
         if (_slowAccumulator < SlowChannelInterval) return;
 
-        // Se pasa el acumulado y no el delta del frame, para que la lógica lenta
-        // no quede atada al framerate.
+        // Le paso el tiempo acumulado y no el delta del frame, así no depende del framerate.
         _slow.Tick(_slowAccumulator);
         _slowAccumulator = 0f;
     }

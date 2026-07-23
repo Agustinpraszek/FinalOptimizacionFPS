@@ -1,7 +1,6 @@
 using UnityEngine;
 
-// Lo que deja un enemigo al morir. Lo consumen la economía y, más adelante, el
-// sistema de VFX.
+// Lo que deja un enemigo al morir. Lo consumen la economía y los VFX.
 public readonly struct EnemyKillInfo
 {
     public readonly Vector3 Position;

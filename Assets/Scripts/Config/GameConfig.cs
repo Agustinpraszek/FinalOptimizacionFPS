@@ -1,7 +1,7 @@
 using UnityEngine;
 
-// Asset raíz de configuración. Existe para que GameBootstrap no acumule campos
-// en el Inspector: entra todo por una sola referencia.
+// Asset raíz de configuración. Así GameBootstrap no acumula campos en el
+// Inspector, entra todo por una sola referencia.
 [CreateAssetMenu(menuName = "Game/Game Config", fileName = "GameConfig")]
 public sealed class GameConfig : ScriptableObject
 {

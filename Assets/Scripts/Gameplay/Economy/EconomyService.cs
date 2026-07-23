@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-// Saldo del jugador. No sabe de dónde sale la plata ni en qué se gasta: el
+// Saldo del jugador. No sabe de dónde sale la plata ni en qué se gasta. El
 // bootstrap le conecta las fuentes y la tienda le pide gastar.
 public sealed class EconomyService
 {

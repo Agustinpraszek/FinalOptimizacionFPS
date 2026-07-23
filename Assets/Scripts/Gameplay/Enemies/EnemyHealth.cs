@@ -1,6 +1,6 @@
 using UnityEngine;
 
-// Vida de un enemigo, por composición: cualquier IEnemy la usa sin heredar nada.
+// Vida de un enemigo, por composición. Cualquier IEnemy la usa sin heredar nada.
 public sealed class EnemyHealth
 {
     private int _max;

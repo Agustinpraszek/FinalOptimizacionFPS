@@ -2,7 +2,7 @@ using UnityEngine;
 
 // Un efecto en escena. Se apaga solo cuando se le acaba la duración y el
 // VfxSystem lo devuelve al pool.
-// Tolera prefabs sin ParticleSystem: en ese caso solo prende y apaga el objeto.
+// Tolera prefabs sin ParticleSystem. En ese caso solo prende y apaga el objeto.
 public sealed class VfxInstance : IUpdatable, IPooledView
 {
     private readonly GameObject _gameObject;

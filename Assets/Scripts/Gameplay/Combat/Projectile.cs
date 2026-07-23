@@ -1,10 +1,10 @@
 using UnityEngine;
 
 // Proyectil pooleado.
-// Chequea impactos con un Raycast sobre el tramo que recorre en el frame, no
-// con un overlap en la posición final: así no atraviesa objetos finos a alta
-// velocidad y respeta la LayerMask. Antes usaba SphereCast, pero con el radio
-// que manejábamos (0.1) el sweep no sumaba precisión real y salía más caro.
+// Detecta impactos con un Raycast sobre el tramo que recorre en el frame, no con
+// un overlap en la posición final. Así no atraviesa objetos finos a alta velocidad
+// y respeta la LayerMask. Probamos SphereCast antes, pero con el radio que usábamos
+// (0.1) no sumaba precisión y salía más caro.
 // No resuelve daño, solo avisa a quién le pegó.
 public sealed class Projectile : IUpdatable, IPooledView
 {
@@ -78,7 +78,7 @@ public sealed class Projectile : IUpdatable, IPooledView
 
         if (count == 0) return false;
 
-        // RaycastNonAlloc no ordena los resultados, hay que buscar el más cercano.
+        // RaycastNonAlloc no ordena, así que busco el más cercano a mano.
         int nearest = 0;
         for (int i = 1; i < count; i++)
         {

@@ -15,12 +15,10 @@ public sealed class Zombie : IEnemy
     private float _reachRadius;
     private bool _active;
 
-    // Posición "intención" propia, independiente de _transform.position.
-    // Rigidbody.MovePosition en un cuerpo kinematic no mueve nada hasta el
-    // próximo step de física, así que si Tick corre más de una vez entre steps
-    // (Update va más rápido que el physics step, algo común bajo carga), leer
-    // _transform.position de nuevo cada vez pisa el pedido anterior en vez de
-    // sumarse a él y el zombie avanza mucho menos de lo que debería.
+    // Posición de intención propia, aparte de _transform.position.
+    // MovePosition en un kinematic recién aplica en el próximo step de física.
+    // Si Tick corre varias veces entre steps y releo _transform.position, piso
+    // el pedido anterior y el zombie avanza de menos. Acá la voy acumulando.
     private Vector3 _currentPosition;
 
     public GameObject GameObject => _gameObject;
@@ -46,8 +44,8 @@ public sealed class Zombie : IEnemy
         _transform.position = context.Position;
         _currentPosition = context.Position;
 
-        // Sincroniza el Rigidbody con el teleport del pool: MovePosition interpola,
-        // así que sin esto el zombie arrastra visualmente desde donde murió antes.
+        // Alineo el Rigidbody con el teleport del pool. MovePosition interpola, así
+        // que sin esto el zombie arrastra desde donde murió el anterior.
         if (_rigidbody != null) _rigidbody.position = context.Position;
 
         _target = context.Target;
@@ -82,7 +80,7 @@ public sealed class Zombie : IEnemy
             return;
         }
 
-        // Aseguramos que la animación esté corriendo si el Tick se está ejecutando
+        // Si el Tick corre, la animación tiene que estar andando.
         if (_animator != null && _animator.speed == 0f)
         {
             _animator.speed = 1f;

@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using Object = UnityEngine.Object;
 
-// Pool para cualquier entidad que exponga una vista de Unity. Sumar un tipo
-// nuevo no requiere un pool nuevo, solo pasarle su factory.
-// Instantiate solo en el prewarm o si se queda corto; nunca hay Destroy en gameplay.
+// Pool genérico para cualquier entidad con vista de Unity. Un tipo nuevo no
+// necesita otro pool, alcanza con pasarle su factory.
+// Instantiate solo en el prewarm o si se queda corto. Nunca hay Destroy en gameplay.
 public sealed class Pool<T> where T : class, IPooledView
 {
     private readonly GameObject _prefab;
@@ -13,8 +13,8 @@ public sealed class Pool<T> where T : class, IPooledView
     private readonly Func<GameObject, T> _factory;
     private readonly Stack<T> _available;
 
-    // Evita devolver dos veces lo mismo, que duplicaría la instancia en el pool
-    // y dejaría a dos usuarios operando sobre el mismo objeto.
+    // Evita meter dos veces el mismo objeto, que dejaría a dos usuarios operando
+    // sobre la misma instancia.
     private readonly HashSet<T> _pooled;
 
     public int AvailableCount => _available.Count;

@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 
 // Arma equipada, cadencia, dispersión y qué armas tiene el jugador.
-// Le pide disparos al ProjectileSystem; no sabe nada de pools ni de enemigos.
+// Le pide disparos al ProjectileSystem. No sabe nada de pools ni de enemigos.
 public sealed class WeaponSystem : IUpdatable
 {
     private static readonly Key[] SlotKeys =
@@ -121,8 +121,8 @@ public sealed class WeaponSystem : IUpdatable
         OnShotFired?.Invoke(origin, forward);
     }
 
-    // El cono se arma sobre el eje del disparo y no sobre ejes de mundo, para que
-    // la dispersión sea igual mirando al horizonte que mirando al piso.
+    // El cono se arma sobre el eje del disparo, no sobre los ejes del mundo, así
+    // la dispersión es igual mirando al horizonte que al piso.
     private static Vector3 ApplySpread(Vector3 forward, float spreadAngle)
     {
         if (spreadAngle <= 0f) return forward;

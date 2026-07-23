@@ -59,10 +59,10 @@ public sealed class WeaponRecoilSystem : IUpdatable
 
     public void Tick(float deltaTime)
     {
-        // En reposo no toca el transform: sin disparos, este sistema no cuesta nada.
+        // En reposo no toca el transform. Sin disparos, este sistema no cuesta nada.
         if (_pivot == null || _atRest) return;
 
-        // Decaimiento exponencial en vez de Lerp con deltaTime crudo: así el
+        // Decaimiento exponencial en vez de Lerp con deltaTime crudo, así el
         // retroceso se siente igual a 30 que a 144 FPS.
         _target = Vector3.Lerp(_target, Vector3.zero, Decay(_recoverySpeed, deltaTime));
         _current = Vector3.Lerp(_current, _target, Decay(_snappiness, deltaTime));

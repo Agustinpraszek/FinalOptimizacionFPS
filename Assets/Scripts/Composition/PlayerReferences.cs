@@ -2,7 +2,7 @@ using System;
 using UnityEngine;
 
 // Referencias de escena del jugador. Serializable y no MonoBehaviour, así agrupa
-// datos dentro de SceneReferences sin gastar uno de los tres scripts permitidos.
+// datos dentro de SceneReferences sin gastar un MonoBehaviour propio.
 [Serializable]
 public sealed class PlayerReferences
 {

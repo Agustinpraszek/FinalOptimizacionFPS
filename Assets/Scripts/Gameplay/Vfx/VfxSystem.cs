@@ -2,8 +2,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 // Spawnea y recicla efectos visuales, un pool por VfxData.
-// Play() ignora en silencio los VfxData sin asignar: el aviso de que faltan lo da
-// VfxSettings.LogMissing() una sola vez al arrancar, así la consola no se llena.
+// Play() ignora en silencio los VfxData sin asignar. El aviso de que faltan lo da
+// VfxSettings.LogMissing() una sola vez al arrancar, así no llena la consola.
 public sealed class VfxSystem : IUpdatable
 {
     private readonly UpdateManager _updateManager;

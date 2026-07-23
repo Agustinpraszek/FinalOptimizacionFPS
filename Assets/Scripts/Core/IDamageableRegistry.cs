@@ -1,8 +1,7 @@
 using UnityEngine;
 
-// Traduce un GameObject impactado a la entidad lógica que le corresponde.
-// Es el puente entre "le pegué a un collider" y "a quién le pegué", sin que los
-// sistemas se referencien entre sí.
+// Traduce el GameObject impactado a su entidad lógica. El puente entre
+// "le pegué a un collider" y "a quién le pegué", sin acoplar sistemas.
 public interface IDamageableRegistry
 {
     void Register(GameObject view, IDamageable target);
