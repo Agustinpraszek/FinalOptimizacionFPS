@@ -24,6 +24,11 @@ public sealed class GameFlowSystem : IUpdatable
 
         _isGameOver = true;
         _updateManager.SetPaused(true);
+
+        // Frena física, animators y partículas. El SetPaused ya cortó los canales
+        // de gameplay del loop.
+        Time.timeScale = 0f;
+
         SetCursorLocked(false);
     }
 
@@ -39,6 +44,8 @@ public sealed class GameFlowSystem : IUpdatable
 
     private static void Restart()
     {
+        // Si no lo reseteo, la escena nueva arranca congelada por el timeScale del game over.
+        Time.timeScale = 1f;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 

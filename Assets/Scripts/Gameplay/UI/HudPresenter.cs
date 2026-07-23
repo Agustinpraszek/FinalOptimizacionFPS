@@ -16,6 +16,9 @@ public sealed class HudPresenter
         if (_refs.OutcomeText != null)
             _refs.OutcomeText.gameObject.SetActive(false);
 
+        if (_refs.GameOverPanel != null)
+            _refs.GameOverPanel.SetActive(false);
+
         if (_refs.ShopPromptText != null)
             _refs.ShopPromptText.gameObject.SetActive(false);
     }
@@ -64,6 +67,10 @@ public sealed class HudPresenter
 
     private void ShowOutcome(string message)
     {
+        // El panel se prende primero aunque falte el texto, así siempre tapa la escena.
+        if (_refs.GameOverPanel != null)
+            _refs.GameOverPanel.SetActive(true);
+
         if (_refs.OutcomeText == null) return;
 
         _refs.OutcomeText.text = message;

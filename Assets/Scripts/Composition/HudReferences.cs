@@ -14,6 +14,10 @@ public sealed class HudReferences
     [SerializeField] private TMP_Text _shopPromptText;
     [SerializeField] private TMP_Text _outcomeText;
 
+    [Tooltip("Panel opaco que tapa el Game View en el game over. Ponelo detrás " +
+             "del Outcome Text en la jerarquía. Opcional.")]
+    [SerializeField] private GameObject _gameOverPanel;
+
     public TMP_Text WaveText => _waveText;
     public TMP_Text HealthText => _healthText;
     public TMP_Text EnemyCountText => _enemyCountText;
@@ -21,4 +25,5 @@ public sealed class HudReferences
     public TMP_Text WeaponText => _weaponText;
     public TMP_Text ShopPromptText => _shopPromptText;
     public TMP_Text OutcomeText => _outcomeText;
+    public GameObject GameOverPanel => _gameOverPanel;
 }

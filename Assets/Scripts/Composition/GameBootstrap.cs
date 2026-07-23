@@ -28,6 +28,10 @@ public sealed class GameBootstrap : MonoBehaviour
     {
         if (!Validate()) return;
 
+        // Red de seguridad: si se salió de una partida con el timeScale en 0, la
+        // escena no debe arrancar congelada.
+        Time.timeScale = 1f;
+
         _updateManager = new GameObject("UpdateManager").AddComponent<UpdateManager>();
 
         var registry = new DamageableRegistry();
