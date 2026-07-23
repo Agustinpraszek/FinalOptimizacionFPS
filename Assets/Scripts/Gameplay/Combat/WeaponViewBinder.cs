@@ -2,15 +2,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using Object = UnityEngine.Object;
 
-// Muestra el modelo en primera persona del arma equipada.
-// Instancia todas las vistas una sola vez al arrancar y después solo prende y
-// apaga: no hay Instantiate ni Destroy durante el gameplay.
-// Si a un arma le falta el prefab, avisa una vez y se juega sin modelo.
 public sealed class WeaponViewBinder
 {
+    private static readonly int FireTrigger = Animator.StringToHash("Fire");
+
     private readonly Dictionary<WeaponData, GameObject> _views;
 
     private GameObject _current;
+
+    private Animator _currentAnimator;
 
     public WeaponViewBinder(Transform pivot, IReadOnlyList<WeaponData> weapons)
     {
@@ -37,8 +37,6 @@ public sealed class WeaponViewBinder
                 continue;
             }
 
-            // Instantiate con parent conserva la posición local del prefab, así
-            // cada arma trae su propio encuadre y el pivot es solo el ancla.
             GameObject view = Object.Instantiate(weapon.ViewPrefab, pivot);
             view.SetActive(false);
             _views[weapon] = view;
@@ -56,5 +54,12 @@ public sealed class WeaponViewBinder
         if (next != null) next.SetActive(true);
 
         _current = next;
+        _currentAnimator = next != null ? next.GetComponent<Animator>() : null;
+    }
+
+    public void PlayFire()
+    {
+        if (_currentAnimator == null) return;
+        _currentAnimator.SetTrigger(FireTrigger);
     }
 }

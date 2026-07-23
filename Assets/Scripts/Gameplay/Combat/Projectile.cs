@@ -1,9 +1,10 @@
 using UnityEngine;
 
 // Proyectil pooleado.
-// Chequea impactos con un SphereCast sobre el tramo que recorre en el frame, no
+// Chequea impactos con un Raycast sobre el tramo que recorre en el frame, no
 // con un overlap en la posición final: así no atraviesa objetos finos a alta
-// velocidad y respeta la LayerMask.
+// velocidad y respeta la LayerMask. Antes usaba SphereCast, pero con el radio
+// que manejábamos (0.1) el sweep no sumaba precisión real y salía más caro.
 // No resuelve daño, solo avisa a quién le pegó.
 public sealed class Projectile : IUpdatable, IPooledView
 {
@@ -63,13 +64,13 @@ public sealed class Projectile : IUpdatable, IPooledView
 
     private bool TryHit(Vector3 origin, Vector3 direction, float step)
     {
-        int count = Physics.SphereCastNonAlloc(
-            origin, _config.Radius, direction, _hitBuffer, step,
+        int count = Physics.RaycastNonAlloc(
+            origin, direction, _hitBuffer, step,
             _config.HitMask, QueryTriggerInteraction.Ignore);
 
         if (count == 0) return false;
 
-        // SphereCastNonAlloc no ordena los resultados, hay que buscar el más cercano.
+        // RaycastNonAlloc no ordena los resultados, hay que buscar el más cercano.
         int nearest = 0;
         for (int i = 1; i < count; i++)
         {

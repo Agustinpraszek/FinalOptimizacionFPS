@@ -8,8 +8,9 @@ OcclusionCullingSettings:
     smallestOccluder: 5
     smallestHole: 0.25
     backfaceThreshold: 100
-  m_SceneGUID: 00000000000000000000000000000000
-  m_OcclusionCullingData: {fileID: 0}
+  m_SceneGUID: 10c9ab1f0fa2fe947be79d4ce9637657
+  m_OcclusionCullingData: {fileID: 36300000, guid: b297235bf61a38949836a460c64d1ad5,
+    type: 2}
 --- !u!104 &2
 RenderSettings:
   m_ObjectHideFlags: 0
@@ -179,6 +180,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wooden_box_v1_LD2square (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 1000010619805496, guid: 395dcd74773407e4faa9906eedf6f75d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 4000010570413510, guid: 395dcd74773407e4faa9906eedf6f75d, type: 3}
       propertyPath: m_LocalScale.x
       value: 3
@@ -322,9 +327,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 275499528}
     m_Modifications:
+    - target: {fileID: 1000010512318482, guid: 32c4edf4f02ad254092a6e1ba94f5b4e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000012505609968, guid: 32c4edf4f02ad254092a6e1ba94f5b4e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 1000012516067446, guid: 32c4edf4f02ad254092a6e1ba94f5b4e, type: 3}
       propertyPath: m_Name
       value: Concrete_fence_v2_S_half
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000012516067446, guid: 32c4edf4f02ad254092a6e1ba94f5b4e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4000010482363180, guid: 32c4edf4f02ad254092a6e1ba94f5b4e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -379,9 +396,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 275499528}
     m_Modifications:
+    - target: {fileID: 1000010512318482, guid: 32c4edf4f02ad254092a6e1ba94f5b4e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000012505609968, guid: 32c4edf4f02ad254092a6e1ba94f5b4e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 1000012516067446, guid: 32c4edf4f02ad254092a6e1ba94f5b4e, type: 3}
       propertyPath: m_Name
       value: Concrete_fence_v2_S_half (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000012516067446, guid: 32c4edf4f02ad254092a6e1ba94f5b4e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4000010482363180, guid: 32c4edf4f02ad254092a6e1ba94f5b4e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -496,6 +525,33 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d803e729730d97a4e89edf13b602b3f4, type: 3}
+--- !u!1 &66769079 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1000011211479386, guid: aca4c3cf28c5f5a428fb19299881807f,
+    type: 3}
+  m_PrefabInstance: {fileID: 1748960168}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &66769084
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 66769079}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 3.1052666, y: 2.565525, z: 3.105267}
+  m_Center: {x: 0.0000019073486, y: -0.000000059604645, z: 0.00000023841858}
 --- !u!4 &81669336 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4000010482363180, guid: 32c4edf4f02ad254092a6e1ba94f5b4e,
@@ -587,6 +643,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Concrete_fence_v2_L
       objectReference: {fileID: 0}
+    - target: {fileID: 1000010445383670, guid: aca4c3cf28c5f5a428fb19299881807f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000011211479386, guid: aca4c3cf28c5f5a428fb19299881807f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000012361127368, guid: aca4c3cf28c5f5a428fb19299881807f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 4000010737657962, guid: aca4c3cf28c5f5a428fb19299881807f, type: 3}
       propertyPath: m_LocalPosition.x
       value: -40.443172
@@ -643,6 +711,18 @@ PrefabInstance:
     - target: {fileID: 1000010445383670, guid: aca4c3cf28c5f5a428fb19299881807f, type: 3}
       propertyPath: m_Name
       value: Concrete_fence_v2_L (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000010445383670, guid: aca4c3cf28c5f5a428fb19299881807f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000011211479386, guid: aca4c3cf28c5f5a428fb19299881807f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000012361127368, guid: aca4c3cf28c5f5a428fb19299881807f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4000010737657962, guid: aca4c3cf28c5f5a428fb19299881807f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -707,6 +787,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Oil_tank_v2
       objectReference: {fileID: 0}
+    - target: {fileID: 1000010192389154, guid: 39485138b2c1f4d41bdd3846e259ffea, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 4000010507042020, guid: 39485138b2c1f4d41bdd3846e259ffea, type: 3}
       propertyPath: m_LocalPosition.x
       value: -37.84942
@@ -747,10 +831,15 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 64000010251917238, guid: 39485138b2c1f4d41bdd3846e259ffea, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1000010192389154, guid: 39485138b2c1f4d41bdd3846e259ffea,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2075004977}
   m_SourcePrefab: {fileID: 100100000, guid: 39485138b2c1f4d41bdd3846e259ffea, type: 3}
 --- !u!4 &133735189 stripped
 Transform:
@@ -769,6 +858,18 @@ PrefabInstance:
     - target: {fileID: 1000012433200114, guid: 60cf315f432990a41b67cef3d41a92f4, type: 3}
       propertyPath: m_Name
       value: Concrete_fence_v2_Gate (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000012433200114, guid: 60cf315f432990a41b67cef3d41a92f4, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000013948420292, guid: 60cf315f432990a41b67cef3d41a92f4, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000014215199998, guid: 60cf315f432990a41b67cef3d41a92f4, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4000014133883218, guid: 60cf315f432990a41b67cef3d41a92f4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -810,10 +911,24 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1557643081188422957, guid: 60cf315f432990a41b67cef3d41a92f4,
+        type: 3}
+      propertyPath: m_Size.z
+      value: 0.61357737
+      objectReference: {fileID: 0}
+    - target: {fileID: 1557643081188422957, guid: 60cf315f432990a41b67cef3d41a92f4,
+        type: 3}
+      propertyPath: m_Center.z
+      value: -2.529463
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1000014215199998, guid: 60cf315f432990a41b67cef3d41a92f4,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1992539573}
   m_SourcePrefab: {fileID: 100100000, guid: 60cf315f432990a41b67cef3d41a92f4, type: 3}
 --- !u!4 &138986777 stripped
 Transform:
@@ -832,6 +947,10 @@ PrefabInstance:
     - target: {fileID: 1000010154774544, guid: be5fbd779d793664582acd2f1cd23155, type: 3}
       propertyPath: m_Name
       value: UNIConcrete_fence_v1_end
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000010154774544, guid: be5fbd779d793664582acd2f1cd23155, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4000013589611842, guid: be5fbd779d793664582acd2f1cd23155, type: 3}
       propertyPath: m_LocalPosition.x
@@ -890,6 +1009,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Concrete_fence_v2_S (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 1000013039883512, guid: fee6e1da33beae9409089ab8a832464f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000013693227596, guid: fee6e1da33beae9409089ab8a832464f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000014037010034, guid: fee6e1da33beae9409089ab8a832464f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 4000010230679374, guid: fee6e1da33beae9409089ab8a832464f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 24.31026
@@ -947,6 +1078,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: UNIConcrete_fence_v1_s
       objectReference: {fileID: 0}
+    - target: {fileID: 1000011824939378, guid: f0edaebc598e4d34b80cc4fcf3f6550b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 4000010110136030, guid: f0edaebc598e4d34b80cc4fcf3f6550b, type: 3}
       propertyPath: m_LocalPosition.x
       value: -39.14009
@@ -987,7 +1122,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 65000012829753496, guid: f0edaebc598e4d34b80cc4fcf3f6550b, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -1050,55 +1186,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -181.015
       objectReference: {fileID: 0}
-    - target: {fileID: 3599180224555674520, guid: 921f157814f75d84080b421e91acc06a,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
-    - target: {fileID: 3922365219395681879, guid: 921f157814f75d84080b421e91acc06a,
-        type: 3}
-      propertyPath: m_Color.b
-      value: 0.6745283
-      objectReference: {fileID: 0}
-    - target: {fileID: 3922365219395681879, guid: 921f157814f75d84080b421e91acc06a,
-        type: 3}
-      propertyPath: m_Color.g
-      value: 0.91390896
-      objectReference: {fileID: 0}
-    - target: {fileID: 3922365219395681879, guid: 921f157814f75d84080b421e91acc06a,
-        type: 3}
-      propertyPath: m_Color.r
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3922365219395681879, guid: 921f157814f75d84080b421e91acc06a,
-        type: 3}
-      propertyPath: m_Intensity
-      value: 30
-      objectReference: {fileID: 0}
-    - target: {fileID: 3922365219395681879, guid: 921f157814f75d84080b421e91acc06a,
-        type: 3}
-      propertyPath: m_Lightmapping
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3922365219395681879, guid: 921f157814f75d84080b421e91acc06a,
-        type: 3}
-      propertyPath: m_Shadows.m_Type
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4544621869252912049, guid: 921f157814f75d84080b421e91acc06a,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
     - target: {fileID: 6470658264156812115, guid: 921f157814f75d84080b421e91acc06a,
         type: 3}
       propertyPath: m_Name
       value: Spot Light (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 6470658264156812115, guid: 921f157814f75d84080b421e91acc06a,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1134,6 +1225,10 @@ PrefabInstance:
     - target: {fileID: 1000011804541950, guid: f6bcabe29ce92584f8125c196a931d73, type: 3}
       propertyPath: m_Name
       value: Electric_box_v1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000011804541950, guid: f6bcabe29ce92584f8125c196a931d73, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4000011925246560, guid: f6bcabe29ce92584f8125c196a931d73, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1201,7 +1296,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!65 &211616016
 BoxCollider:
@@ -1361,50 +1456,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -449.427
       objectReference: {fileID: 0}
-    - target: {fileID: 3599180224555674520, guid: 921f157814f75d84080b421e91acc06a,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
-    - target: {fileID: 3922365219395681879, guid: 921f157814f75d84080b421e91acc06a,
-        type: 3}
-      propertyPath: m_Color.b
-      value: 0.6745098
-      objectReference: {fileID: 0}
-    - target: {fileID: 3922365219395681879, guid: 921f157814f75d84080b421e91acc06a,
-        type: 3}
-      propertyPath: m_Color.g
-      value: 0.9137255
-      objectReference: {fileID: 0}
-    - target: {fileID: 3922365219395681879, guid: 921f157814f75d84080b421e91acc06a,
-        type: 3}
-      propertyPath: m_Intensity
-      value: 30
-      objectReference: {fileID: 0}
-    - target: {fileID: 3922365219395681879, guid: 921f157814f75d84080b421e91acc06a,
-        type: 3}
-      propertyPath: m_Lightmapping
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3922365219395681879, guid: 921f157814f75d84080b421e91acc06a,
-        type: 3}
-      propertyPath: m_Shadows.m_Type
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4544621869252912049, guid: 921f157814f75d84080b421e91acc06a,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
     - target: {fileID: 6470658264156812115, guid: 921f157814f75d84080b421e91acc06a,
         type: 3}
       propertyPath: m_Name
       value: Spot Light (10)
-      objectReference: {fileID: 0}
-    - target: {fileID: 6470658264156812115, guid: 921f157814f75d84080b421e91acc06a,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1434,7 +1489,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!224 &261273127
 RectTransform:
@@ -1530,6 +1585,10 @@ PrefabInstance:
     - target: {fileID: 1000010628347772, guid: 46132fa6877a42947bf1f7f15c09f435, type: 3}
       propertyPath: m_Name
       value: Generator_v1 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000010628347772, guid: 46132fa6877a42947bf1f7f15c09f435, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4000012999968834, guid: 46132fa6877a42947bf1f7f15c09f435, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1710,7 +1769,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!224 &282843704
 RectTransform:
@@ -1925,50 +1984,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -181.015
       objectReference: {fileID: 0}
-    - target: {fileID: 3599180224555674520, guid: 921f157814f75d84080b421e91acc06a,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
-    - target: {fileID: 3922365219395681879, guid: 921f157814f75d84080b421e91acc06a,
-        type: 3}
-      propertyPath: m_Color.b
-      value: 0.6745098
-      objectReference: {fileID: 0}
-    - target: {fileID: 3922365219395681879, guid: 921f157814f75d84080b421e91acc06a,
-        type: 3}
-      propertyPath: m_Color.g
-      value: 0.9137255
-      objectReference: {fileID: 0}
-    - target: {fileID: 3922365219395681879, guid: 921f157814f75d84080b421e91acc06a,
-        type: 3}
-      propertyPath: m_Intensity
-      value: 30
-      objectReference: {fileID: 0}
-    - target: {fileID: 3922365219395681879, guid: 921f157814f75d84080b421e91acc06a,
-        type: 3}
-      propertyPath: m_Lightmapping
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3922365219395681879, guid: 921f157814f75d84080b421e91acc06a,
-        type: 3}
-      propertyPath: m_Shadows.m_Type
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4544621869252912049, guid: 921f157814f75d84080b421e91acc06a,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
     - target: {fileID: 6470658264156812115, guid: 921f157814f75d84080b421e91acc06a,
         type: 3}
       propertyPath: m_Name
       value: Spot Light (8)
-      objectReference: {fileID: 0}
-    - target: {fileID: 6470658264156812115, guid: 921f157814f75d84080b421e91acc06a,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2101,50 +2120,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -181.015
       objectReference: {fileID: 0}
-    - target: {fileID: 3599180224555674520, guid: 921f157814f75d84080b421e91acc06a,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
-    - target: {fileID: 3922365219395681879, guid: 921f157814f75d84080b421e91acc06a,
-        type: 3}
-      propertyPath: m_Color.b
-      value: 0.6745098
-      objectReference: {fileID: 0}
-    - target: {fileID: 3922365219395681879, guid: 921f157814f75d84080b421e91acc06a,
-        type: 3}
-      propertyPath: m_Color.g
-      value: 0.9137255
-      objectReference: {fileID: 0}
-    - target: {fileID: 3922365219395681879, guid: 921f157814f75d84080b421e91acc06a,
-        type: 3}
-      propertyPath: m_Intensity
-      value: 30
-      objectReference: {fileID: 0}
-    - target: {fileID: 3922365219395681879, guid: 921f157814f75d84080b421e91acc06a,
-        type: 3}
-      propertyPath: m_Lightmapping
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3922365219395681879, guid: 921f157814f75d84080b421e91acc06a,
-        type: 3}
-      propertyPath: m_Shadows.m_Type
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4544621869252912049, guid: 921f157814f75d84080b421e91acc06a,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
     - target: {fileID: 6470658264156812115, guid: 921f157814f75d84080b421e91acc06a,
         type: 3}
       propertyPath: m_Name
       value: Spot Light (3)
-      objectReference: {fileID: 0}
-    - target: {fileID: 6470658264156812115, guid: 921f157814f75d84080b421e91acc06a,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2495,6 +2474,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Hangar_v1_full
       objectReference: {fileID: 0}
+    - target: {fileID: 1000013721592950, guid: 95c00f442e3cf3643b2062e8e0d0bbd6, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 4000013703715314, guid: 95c00f442e3cf3643b2062e8e0d0bbd6, type: 3}
       propertyPath: m_LocalPosition.x
       value: -27.44556
@@ -2535,7 +2518,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 64000011546560374, guid: 95c00f442e3cf3643b2062e8e0d0bbd6, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -2557,7 +2541,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &492400661
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2654,6 +2638,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Road_block_v1 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 1000012744991898, guid: 36667f34d4b750c4695e409fb89b51f8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 4000012564366324, guid: 36667f34d4b750c4695e409fb89b51f8, type: 3}
       propertyPath: m_LocalPosition.x
       value: -23.805561
@@ -2723,6 +2711,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Road_block_v1 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 1000012744991898, guid: 36667f34d4b750c4695e409fb89b51f8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 4000012564366324, guid: 36667f34d4b750c4695e409fb89b51f8, type: 3}
       propertyPath: m_LocalPosition.x
       value: -26.1559
@@ -2768,6 +2760,12 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 36667f34d4b750c4695e409fb89b51f8, type: 3}
+--- !u!1 &519204760 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1000010153590016, guid: 21cd13e1bef6c4d49b6a39c0979ddb31,
+    type: 3}
+  m_PrefabInstance: {fileID: 1794147463}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &520213304 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 912348998456760745, guid: 921f157814f75d84080b421e91acc06a,
@@ -2894,50 +2892,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -360.9
       objectReference: {fileID: 0}
-    - target: {fileID: 3599180224555674520, guid: 921f157814f75d84080b421e91acc06a,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
-    - target: {fileID: 3922365219395681879, guid: 921f157814f75d84080b421e91acc06a,
-        type: 3}
-      propertyPath: m_Color.b
-      value: 0.6745098
-      objectReference: {fileID: 0}
-    - target: {fileID: 3922365219395681879, guid: 921f157814f75d84080b421e91acc06a,
-        type: 3}
-      propertyPath: m_Color.g
-      value: 0.9137255
-      objectReference: {fileID: 0}
-    - target: {fileID: 3922365219395681879, guid: 921f157814f75d84080b421e91acc06a,
-        type: 3}
-      propertyPath: m_Intensity
-      value: 30
-      objectReference: {fileID: 0}
-    - target: {fileID: 3922365219395681879, guid: 921f157814f75d84080b421e91acc06a,
-        type: 3}
-      propertyPath: m_Lightmapping
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3922365219395681879, guid: 921f157814f75d84080b421e91acc06a,
-        type: 3}
-      propertyPath: m_Shadows.m_Type
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4544621869252912049, guid: 921f157814f75d84080b421e91acc06a,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
     - target: {fileID: 6470658264156812115, guid: 921f157814f75d84080b421e91acc06a,
         type: 3}
       propertyPath: m_Name
       value: Spot Light (9)
-      objectReference: {fileID: 0}
-    - target: {fileID: 6470658264156812115, guid: 921f157814f75d84080b421e91acc06a,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3214,50 +3172,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -360.9
       objectReference: {fileID: 0}
-    - target: {fileID: 3599180224555674520, guid: 921f157814f75d84080b421e91acc06a,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
-    - target: {fileID: 3922365219395681879, guid: 921f157814f75d84080b421e91acc06a,
-        type: 3}
-      propertyPath: m_Color.b
-      value: 0.6745098
-      objectReference: {fileID: 0}
-    - target: {fileID: 3922365219395681879, guid: 921f157814f75d84080b421e91acc06a,
-        type: 3}
-      propertyPath: m_Color.g
-      value: 0.9137255
-      objectReference: {fileID: 0}
-    - target: {fileID: 3922365219395681879, guid: 921f157814f75d84080b421e91acc06a,
-        type: 3}
-      propertyPath: m_Intensity
-      value: 30
-      objectReference: {fileID: 0}
-    - target: {fileID: 3922365219395681879, guid: 921f157814f75d84080b421e91acc06a,
-        type: 3}
-      propertyPath: m_Lightmapping
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3922365219395681879, guid: 921f157814f75d84080b421e91acc06a,
-        type: 3}
-      propertyPath: m_Shadows.m_Type
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4544621869252912049, guid: 921f157814f75d84080b421e91acc06a,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
     - target: {fileID: 6470658264156812115, guid: 921f157814f75d84080b421e91acc06a,
         type: 3}
       propertyPath: m_Name
       value: Spot Light (11)
-      objectReference: {fileID: 0}
-    - target: {fileID: 6470658264156812115, guid: 921f157814f75d84080b421e91acc06a,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3365,6 +3283,18 @@ PrefabInstance:
     - target: {fileID: 1000010445383670, guid: aca4c3cf28c5f5a428fb19299881807f, type: 3}
       propertyPath: m_Name
       value: Concrete_fence_v2_L (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000010445383670, guid: aca4c3cf28c5f5a428fb19299881807f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000011211479386, guid: aca4c3cf28c5f5a428fb19299881807f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000012361127368, guid: aca4c3cf28c5f5a428fb19299881807f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4000010737657962, guid: aca4c3cf28c5f5a428fb19299881807f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3659,6 +3589,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Road_block_v1 (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 1000012744991898, guid: 36667f34d4b750c4695e409fb89b51f8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 4000012564366324, guid: 36667f34d4b750c4695e409fb89b51f8, type: 3}
       propertyPath: m_LocalPosition.x
       value: -39.47556
@@ -3728,6 +3662,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Concrete_fence_v1_wall_set_v1
       objectReference: {fileID: 0}
+    - target: {fileID: 1000010959013678, guid: f5c94d7d7f024eb43b7dd5258c0608d0, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 4000013316604322, guid: f5c94d7d7f024eb43b7dd5258c0608d0, type: 3}
       propertyPath: m_LocalPosition.x
       value: 13.424439
@@ -3768,7 +3706,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 65000010935860296, guid: f5c94d7d7f024eb43b7dd5258c0608d0, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -3784,6 +3723,18 @@ PrefabInstance:
     - target: {fileID: 1000013039883512, guid: fee6e1da33beae9409089ab8a832464f, type: 3}
       propertyPath: m_Name
       value: Concrete_fence_v2_S (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000013039883512, guid: fee6e1da33beae9409089ab8a832464f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000013693227596, guid: fee6e1da33beae9409089ab8a832464f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000014037010034, guid: fee6e1da33beae9409089ab8a832464f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4000010230679374, guid: fee6e1da33beae9409089ab8a832464f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3841,6 +3792,10 @@ PrefabInstance:
     - target: {fileID: 1000010619805496, guid: 395dcd74773407e4faa9906eedf6f75d, type: 3}
       propertyPath: m_Name
       value: Wooden_box_v1_LD2square (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000010619805496, guid: 395dcd74773407e4faa9906eedf6f75d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4000010570413510, guid: 395dcd74773407e4faa9906eedf6f75d, type: 3}
       propertyPath: m_LocalScale.x
@@ -4072,6 +4027,7 @@ Transform:
   - {fileID: 1423298285}
   - {fileID: 591569705}
   - {fileID: 1075225514}
+  - {fileID: 2036708578}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &700603849 stripped
@@ -4097,6 +4053,10 @@ PrefabInstance:
     - target: {fileID: 1000012260637608, guid: 65feeeb562c61c744aa87b8eb394ffcf, type: 3}
       propertyPath: m_Name
       value: Hangar_v4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000012260637608, guid: 65feeeb562c61c744aa87b8eb394ffcf, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4000013603223344, guid: 65feeeb562c61c744aa87b8eb394ffcf, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4231,55 +4191,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -181.015
       objectReference: {fileID: 0}
-    - target: {fileID: 3599180224555674520, guid: 921f157814f75d84080b421e91acc06a,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
-    - target: {fileID: 3922365219395681879, guid: 921f157814f75d84080b421e91acc06a,
-        type: 3}
-      propertyPath: m_Color.b
-      value: 0.6745283
-      objectReference: {fileID: 0}
-    - target: {fileID: 3922365219395681879, guid: 921f157814f75d84080b421e91acc06a,
-        type: 3}
-      propertyPath: m_Color.g
-      value: 0.91390896
-      objectReference: {fileID: 0}
-    - target: {fileID: 3922365219395681879, guid: 921f157814f75d84080b421e91acc06a,
-        type: 3}
-      propertyPath: m_Color.r
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3922365219395681879, guid: 921f157814f75d84080b421e91acc06a,
-        type: 3}
-      propertyPath: m_Intensity
-      value: 30
-      objectReference: {fileID: 0}
-    - target: {fileID: 3922365219395681879, guid: 921f157814f75d84080b421e91acc06a,
-        type: 3}
-      propertyPath: m_Lightmapping
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3922365219395681879, guid: 921f157814f75d84080b421e91acc06a,
-        type: 3}
-      propertyPath: m_Shadows.m_Type
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4544621869252912049, guid: 921f157814f75d84080b421e91acc06a,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
     - target: {fileID: 6470658264156812115, guid: 921f157814f75d84080b421e91acc06a,
         type: 3}
       propertyPath: m_Name
       value: Spot Light (4)
-      objectReference: {fileID: 0}
-    - target: {fileID: 6470658264156812115, guid: 921f157814f75d84080b421e91acc06a,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4362,9 +4277,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 275499528}
     m_Modifications:
+    - target: {fileID: 1000010512318482, guid: 32c4edf4f02ad254092a6e1ba94f5b4e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000012505609968, guid: 32c4edf4f02ad254092a6e1ba94f5b4e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 1000012516067446, guid: 32c4edf4f02ad254092a6e1ba94f5b4e, type: 3}
       propertyPath: m_Name
       value: Concrete_fence_v2_S_half (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000012516067446, guid: 32c4edf4f02ad254092a6e1ba94f5b4e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4000010482363180, guid: 32c4edf4f02ad254092a6e1ba94f5b4e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4419,9 +4346,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 275499528}
     m_Modifications:
+    - target: {fileID: 1000010512318482, guid: 32c4edf4f02ad254092a6e1ba94f5b4e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000012505609968, guid: 32c4edf4f02ad254092a6e1ba94f5b4e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 1000012516067446, guid: 32c4edf4f02ad254092a6e1ba94f5b4e, type: 3}
       propertyPath: m_Name
       value: Concrete_fence_v2_S_half (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000012516067446, guid: 32c4edf4f02ad254092a6e1ba94f5b4e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4000010482363180, guid: 32c4edf4f02ad254092a6e1ba94f5b4e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4526,50 +4465,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -29.008
       objectReference: {fileID: 0}
-    - target: {fileID: 3599180224555674520, guid: 921f157814f75d84080b421e91acc06a,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
-    - target: {fileID: 3922365219395681879, guid: 921f157814f75d84080b421e91acc06a,
-        type: 3}
-      propertyPath: m_Color.b
-      value: 0.6745098
-      objectReference: {fileID: 0}
-    - target: {fileID: 3922365219395681879, guid: 921f157814f75d84080b421e91acc06a,
-        type: 3}
-      propertyPath: m_Color.g
-      value: 0.9137255
-      objectReference: {fileID: 0}
-    - target: {fileID: 3922365219395681879, guid: 921f157814f75d84080b421e91acc06a,
-        type: 3}
-      propertyPath: m_Intensity
-      value: 30
-      objectReference: {fileID: 0}
-    - target: {fileID: 3922365219395681879, guid: 921f157814f75d84080b421e91acc06a,
-        type: 3}
-      propertyPath: m_Lightmapping
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3922365219395681879, guid: 921f157814f75d84080b421e91acc06a,
-        type: 3}
-      propertyPath: m_Shadows.m_Type
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4544621869252912049, guid: 921f157814f75d84080b421e91acc06a,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
     - target: {fileID: 6470658264156812115, guid: 921f157814f75d84080b421e91acc06a,
         type: 3}
       propertyPath: m_Name
       value: Spot Light (2)
-      objectReference: {fileID: 0}
-    - target: {fileID: 6470658264156812115, guid: 921f157814f75d84080b421e91acc06a,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4650,6 +4549,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Concrete_fence_v2_S (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 1000013039883512, guid: fee6e1da33beae9409089ab8a832464f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000013693227596, guid: fee6e1da33beae9409089ab8a832464f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000014037010034, guid: fee6e1da33beae9409089ab8a832464f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 4000010230679374, guid: fee6e1da33beae9409089ab8a832464f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 15.801547
@@ -4707,6 +4618,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cargo_container_v1_LD2through
       objectReference: {fileID: 0}
+    - target: {fileID: 1000013482175582, guid: 7efb7a11251ce1342b172668cbdc65c8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 4000010202300486, guid: 7efb7a11251ce1342b172668cbdc65c8, type: 3}
       propertyPath: m_LocalPosition.x
       value: -21.25556
@@ -4747,16 +4662,39 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 64000011579675622, guid: 7efb7a11251ce1342b172668cbdc65c8, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1000013482175582, guid: 7efb7a11251ce1342b172668cbdc65c8,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1374344338}
+    - targetCorrespondingSourceObject: {fileID: 1000013482175582, guid: 7efb7a11251ce1342b172668cbdc65c8,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1374344337}
+    - targetCorrespondingSourceObject: {fileID: 1000013482175582, guid: 7efb7a11251ce1342b172668cbdc65c8,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1374344336}
+    - targetCorrespondingSourceObject: {fileID: 1000013482175582, guid: 7efb7a11251ce1342b172668cbdc65c8,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1374344335}
   m_SourcePrefab: {fileID: 100100000, guid: 7efb7a11251ce1342b172668cbdc65c8, type: 3}
 --- !u!4 &819887500 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4000010230679374, guid: fee6e1da33beae9409089ab8a832464f,
     type: 3}
   m_PrefabInstance: {fileID: 888657852}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &821930487 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1000010192389154, guid: 39485138b2c1f4d41bdd3846e259ffea,
+    type: 3}
+  m_PrefabInstance: {fileID: 114970962}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &823127231
 GameObject:
@@ -4990,7 +4928,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!224 &857386491
 RectTransform:
@@ -5129,6 +5067,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: UNIConcrete_fence_v1_L
       objectReference: {fileID: 0}
+    - target: {fileID: 1000010232190432, guid: 7d3f5ccb558e7df4da8169755570ff76, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 4000013152806056, guid: 7d3f5ccb558e7df4da8169755570ff76, type: 3}
       propertyPath: m_LocalPosition.x
       value: -40.195557
@@ -5169,7 +5111,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 64000012192409690, guid: 7d3f5ccb558e7df4da8169755570ff76, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -5305,6 +5248,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Concrete_fence_v2_S (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1000013039883512, guid: fee6e1da33beae9409089ab8a832464f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000013693227596, guid: fee6e1da33beae9409089ab8a832464f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000014037010034, guid: fee6e1da33beae9409089ab8a832464f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 4000010230679374, guid: fee6e1da33beae9409089ab8a832464f, type: 3}
       propertyPath: m_LocalPosition.x
       value: -26.36295
@@ -5358,9 +5313,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 275499528}
     m_Modifications:
+    - target: {fileID: 1000010512318482, guid: 32c4edf4f02ad254092a6e1ba94f5b4e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000012505609968, guid: 32c4edf4f02ad254092a6e1ba94f5b4e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 1000012516067446, guid: 32c4edf4f02ad254092a6e1ba94f5b4e, type: 3}
       propertyPath: m_Name
       value: Concrete_fence_v2_S_half (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000012516067446, guid: 32c4edf4f02ad254092a6e1ba94f5b4e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4000010482363180, guid: 32c4edf4f02ad254092a6e1ba94f5b4e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5693,6 +5660,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Road_block_v1 (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 1000012744991898, guid: 36667f34d4b750c4695e409fb89b51f8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 4000012564366324, guid: 36667f34d4b750c4695e409fb89b51f8, type: 3}
       propertyPath: m_LocalPosition.x
       value: 12.164777
@@ -5733,7 +5704,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 64000013717692274, guid: 36667f34d4b750c4695e409fb89b51f8, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -5755,6 +5727,10 @@ PrefabInstance:
     - target: {fileID: 1000010619805496, guid: 395dcd74773407e4faa9906eedf6f75d, type: 3}
       propertyPath: m_Name
       value: Wooden_box_v1_LD2square (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000010619805496, guid: 395dcd74773407e4faa9906eedf6f75d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4000010570413510, guid: 395dcd74773407e4faa9906eedf6f75d, type: 3}
       propertyPath: m_LocalScale.x
@@ -5834,6 +5810,10 @@ PrefabInstance:
     - target: {fileID: 1000011737549872, guid: 8270a6a93cde92045a7d335d31b2ece4, type: 3}
       propertyPath: m_Name
       value: Concrete_fence_v1_s1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000011737549872, guid: 8270a6a93cde92045a7d335d31b2ece4, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4000010496400642, guid: 8270a6a93cde92045a7d335d31b2ece4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5960,6 +5940,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wooden_box_v1_LD2square (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 1000010619805496, guid: 395dcd74773407e4faa9906eedf6f75d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 4000010570413510, guid: 395dcd74773407e4faa9906eedf6f75d, type: 3}
       propertyPath: m_LocalScale.x
       value: 3
@@ -6027,6 +6011,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1784680562}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &976465273 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1000013721592950, guid: 95c00f442e3cf3643b2062e8e0d0bbd6,
+    type: 3}
+  m_PrefabInstance: {fileID: 1959037028}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &990753085
 GameObject:
   m_ObjectHideFlags: 0
@@ -6042,7 +6032,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &990753086
 Transform:
@@ -6093,6 +6083,10 @@ PrefabInstance:
     - target: {fileID: 1000012006241372, guid: 6d21e769def7d504ea22abcb06173633, type: 3}
       propertyPath: m_Name
       value: Bags_on_pallet_v1_1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000012006241372, guid: 6d21e769def7d504ea22abcb06173633, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4000012000326308, guid: 6d21e769def7d504ea22abcb06173633, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6165,9 +6159,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 275499528}
     m_Modifications:
+    - target: {fileID: 1000010512318482, guid: 32c4edf4f02ad254092a6e1ba94f5b4e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000012505609968, guid: 32c4edf4f02ad254092a6e1ba94f5b4e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 1000012516067446, guid: 32c4edf4f02ad254092a6e1ba94f5b4e, type: 3}
       propertyPath: m_Name
       value: Concrete_fence_v2_S_half (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000012516067446, guid: 32c4edf4f02ad254092a6e1ba94f5b4e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4000010482363180, guid: 32c4edf4f02ad254092a6e1ba94f5b4e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6402,6 +6408,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Concrete_fence_v2_S (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 1000013039883512, guid: fee6e1da33beae9409089ab8a832464f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000013693227596, guid: fee6e1da33beae9409089ab8a832464f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000014037010034, guid: fee6e1da33beae9409089ab8a832464f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 4000010230679374, guid: fee6e1da33beae9409089ab8a832464f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 15.801545
@@ -6463,7 +6481,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1114796267
 Transform:
@@ -6704,6 +6722,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: UNIConcrete_fence_v1_s (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1000011824939378, guid: f0edaebc598e4d34b80cc4fcf3f6550b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 4000010110136030, guid: f0edaebc598e4d34b80cc4fcf3f6550b, type: 3}
       propertyPath: m_LocalPosition.x
       value: -39.14009
@@ -6744,7 +6766,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 65000012829753496, guid: f0edaebc598e4d34b80cc4fcf3f6550b, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -6817,6 +6840,10 @@ PrefabInstance:
     - target: {fileID: 1000010619805496, guid: 395dcd74773407e4faa9906eedf6f75d, type: 3}
       propertyPath: m_Name
       value: Wooden_box_v1_LD2square (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000010619805496, guid: 395dcd74773407e4faa9906eedf6f75d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4000010570413510, guid: 395dcd74773407e4faa9906eedf6f75d, type: 3}
       propertyPath: m_LocalScale.x
@@ -6913,7 +6940,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!224 &1183774852
 RectTransform:
@@ -7417,6 +7444,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Concrete_fence_v2_S (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 1000013039883512, guid: fee6e1da33beae9409089ab8a832464f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000013693227596, guid: fee6e1da33beae9409089ab8a832464f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000014037010034, guid: fee6e1da33beae9409089ab8a832464f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 4000010230679374, guid: fee6e1da33beae9409089ab8a832464f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 29.982742
@@ -7600,9 +7639,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 275499528}
     m_Modifications:
+    - target: {fileID: 1000011055481186, guid: dfec00be6c7c5b944991547485554901, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 1000011889595636, guid: dfec00be6c7c5b944991547485554901, type: 3}
       propertyPath: m_Name
       value: Hangar_v2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000011889595636, guid: dfec00be6c7c5b944991547485554901, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000013673233472, guid: dfec00be6c7c5b944991547485554901, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4000011405514568, guid: dfec00be6c7c5b944991547485554901, type: 3}
       propertyPath: m_LocalPosition.x
@@ -7644,7 +7695,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 64000013046495254, guid: dfec00be6c7c5b944991547485554901, type: 3}
+    - {fileID: 64000011484861276, guid: dfec00be6c7c5b944991547485554901, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -7666,7 +7719,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!224 &1327025315
 RectTransform:
@@ -7763,6 +7816,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Concrete_fence_v2_S (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 1000013039883512, guid: fee6e1da33beae9409089ab8a832464f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000013693227596, guid: fee6e1da33beae9409089ab8a832464f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000014037010034, guid: fee6e1da33beae9409089ab8a832464f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 4000010230679374, guid: fee6e1da33beae9409089ab8a832464f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 15.801547
@@ -7820,6 +7885,96 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1396037331}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1374344331 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1000013482175582, guid: 7efb7a11251ce1342b172668cbdc65c8,
+    type: 3}
+  m_PrefabInstance: {fileID: 806345961}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &1374344335
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1374344331}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 8, y: 0.09715283, z: 3.000002}
+  m_Center: {x: -0.666769, y: 1.4802341, z: -0.11217451}
+--- !u!65 &1374344336
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1374344331}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 8, y: 3.0000005, z: 0.03989315}
+  m_Center: {x: -0.6667691, y: 0.00000023841858, z: -1.61}
+--- !u!65 &1374344337
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1374344331}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 8, y: 3.0000005, z: 0.03989315}
+  m_Center: {x: -0.6667691, y: 0.00000023841858, z: 1.3678782}
+--- !u!65 &1374344338
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1374344331}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 8, y: 0.15762103, z: 3.000002}
+  m_Center: {x: -0.666769, y: -1.4211895, z: -0.11217451}
 --- !u!1001 &1381059661
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7831,6 +7986,10 @@ PrefabInstance:
     - target: {fileID: 1000011366982336, guid: 28b2b68147fce3c4187add1104d6ccd8, type: 3}
       propertyPath: m_Name
       value: Concrete_fence_v1_column
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000011366982336, guid: 28b2b68147fce3c4187add1104d6ccd8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4000012234785446, guid: 28b2b68147fce3c4187add1104d6ccd8, type: 3}
       propertyPath: m_LocalPosition.x
@@ -7877,6 +8036,12 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 28b2b68147fce3c4187add1104d6ccd8, type: 3}
+--- !u!1 &1392246458 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1000010150734372, guid: eedd107997f928346af44f04150fc37c,
+    type: 3}
+  m_PrefabInstance: {fileID: 1574243029}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1396037331
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7888,6 +8053,10 @@ PrefabInstance:
     - target: {fileID: 1000011824939378, guid: f0edaebc598e4d34b80cc4fcf3f6550b, type: 3}
       propertyPath: m_Name
       value: UNIConcrete_fence_v1_s (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000011824939378, guid: f0edaebc598e4d34b80cc4fcf3f6550b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4000010110136030, guid: f0edaebc598e4d34b80cc4fcf3f6550b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -7942,9 +8111,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 275499528}
     m_Modifications:
+    - target: {fileID: 1000010512318482, guid: 32c4edf4f02ad254092a6e1ba94f5b4e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000012505609968, guid: 32c4edf4f02ad254092a6e1ba94f5b4e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 1000012516067446, guid: 32c4edf4f02ad254092a6e1ba94f5b4e, type: 3}
       propertyPath: m_Name
       value: Concrete_fence_v2_S_half (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000012516067446, guid: 32c4edf4f02ad254092a6e1ba94f5b4e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4000010482363180, guid: 32c4edf4f02ad254092a6e1ba94f5b4e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -8210,6 +8391,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Electric_box_v1 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1000011804541950, guid: f6bcabe29ce92584f8125c196a931d73, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 4000011925246560, guid: f6bcabe29ce92584f8125c196a931d73, type: 3}
       propertyPath: m_LocalPosition.x
       value: -38.69075
@@ -8266,6 +8451,10 @@ PrefabInstance:
     - target: {fileID: 1000012744991898, guid: 36667f34d4b750c4695e409fb89b51f8, type: 3}
       propertyPath: m_Name
       value: Road_block_v1 (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000012744991898, guid: 36667f34d4b750c4695e409fb89b51f8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4000012564366324, guid: 36667f34d4b750c4695e409fb89b51f8, type: 3}
       propertyPath: m_LocalPosition.x
@@ -8329,7 +8518,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!224 &1518756367
 RectTransform:
@@ -8500,6 +8689,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Concrete_fence_v1_wall_set_v1 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 1000010959013678, guid: f5c94d7d7f024eb43b7dd5258c0608d0, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 4000013316604322, guid: f5c94d7d7f024eb43b7dd5258c0608d0, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.3744392
@@ -8545,6 +8738,57 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f5c94d7d7f024eb43b7dd5258c0608d0, type: 3}
+--- !u!1 &1535172071
+GameObject:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1535172073}
+  - component: {fileID: 1535172072}
+  m_Layer: 0
+  m_Name: ProbeVolumePerSceneData
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1535172072
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1535172071}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a83d2f7ae04ab6f4f99b0d85377be998, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.RenderPipelines.Core.Runtime::UnityEngine.Rendering.ProbeVolumePerSceneData
+  serializedBakingSet: {fileID: 11400000, guid: 64060f27fc32cd84fb82f1af768890c4,
+    type: 2}
+  sceneGUID: 10c9ab1f0fa2fe947be79d4ce9637657
+  obsoleteAsset: {fileID: 0}
+  obsoleteCellSharedDataAsset: {fileID: 0}
+  obsoleteCellSupportDataAsset: {fileID: 0}
+  obsoleteSerializedScenarios: []
+--- !u!4 &1535172073
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1535172071}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1535800229 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4000010570413510, guid: 395dcd74773407e4faa9906eedf6f75d,
@@ -8670,6 +8914,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cargo_container_v1_LD1close
       objectReference: {fileID: 0}
+    - target: {fileID: 1000011523426384, guid: 84147b87204d0a0478bae9558d656ea2, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 4000011048348644, guid: 84147b87204d0a0478bae9558d656ea2, type: 3}
       propertyPath: m_LocalPosition.x
       value: -21.145561
@@ -8726,6 +8974,10 @@ PrefabInstance:
     - target: {fileID: 1000011366982336, guid: 28b2b68147fce3c4187add1104d6ccd8, type: 3}
       propertyPath: m_Name
       value: Concrete_fence_v1_column (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000011366982336, guid: 28b2b68147fce3c4187add1104d6ccd8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4000012234785446, guid: 28b2b68147fce3c4187add1104d6ccd8, type: 3}
       propertyPath: m_LocalPosition.x
@@ -8784,6 +9036,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Hangar_v3_outbuilding_2 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1000010150734372, guid: eedd107997f928346af44f04150fc37c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 4000014248256174, guid: eedd107997f928346af44f04150fc37c, type: 3}
       propertyPath: m_LocalPosition.x
       value: -15.467561
@@ -8824,10 +9080,15 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 64000011736870120, guid: eedd107997f928346af44f04150fc37c, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1000010150734372, guid: eedd107997f928346af44f04150fc37c,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1790138181}
   m_SourcePrefab: {fileID: 100100000, guid: eedd107997f928346af44f04150fc37c, type: 3}
 --- !u!1001 &1583030103
 PrefabInstance:
@@ -8908,6 +9169,18 @@ PrefabInstance:
     - target: {fileID: 1000010445383670, guid: aca4c3cf28c5f5a428fb19299881807f, type: 3}
       propertyPath: m_Name
       value: Concrete_fence_v2_L (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000010445383670, guid: aca4c3cf28c5f5a428fb19299881807f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000011211479386, guid: aca4c3cf28c5f5a428fb19299881807f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000012361127368, guid: aca4c3cf28c5f5a428fb19299881807f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4000010737657962, guid: aca4c3cf28c5f5a428fb19299881807f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -9329,7 +9602,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!65 &1607597407
 BoxCollider:
@@ -9443,6 +9716,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Road_block_v1 (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 1000012744991898, guid: 36667f34d4b750c4695e409fb89b51f8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 4000012564366324, guid: 36667f34d4b750c4695e409fb89b51f8, type: 3}
       propertyPath: m_LocalPosition.x
       value: -11.76696
@@ -9546,6 +9823,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Generator_v1 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 1000010628347772, guid: 46132fa6877a42947bf1f7f15c09f435, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 4000012999968834, guid: 46132fa6877a42947bf1f7f15c09f435, type: 3}
       propertyPath: m_LocalPosition.x
       value: 19.884441
@@ -9603,6 +9884,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Concrete_fence_v2_S (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 1000013039883512, guid: fee6e1da33beae9409089ab8a832464f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000013693227596, guid: fee6e1da33beae9409089ab8a832464f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000014037010034, guid: fee6e1da33beae9409089ab8a832464f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 4000010230679374, guid: fee6e1da33beae9409089ab8a832464f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 15.801547
@@ -9643,7 +9936,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 65000010613152302, guid: fee6e1da33beae9409089ab8a832464f, type: 3}
+    - {fileID: 65000012913242684, guid: fee6e1da33beae9409089ab8a832464f, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -9767,9 +10062,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 275499528}
     m_Modifications:
+    - target: {fileID: 1000010512318482, guid: 32c4edf4f02ad254092a6e1ba94f5b4e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000012505609968, guid: 32c4edf4f02ad254092a6e1ba94f5b4e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 1000012516067446, guid: 32c4edf4f02ad254092a6e1ba94f5b4e, type: 3}
       propertyPath: m_Name
       value: Concrete_fence_v2_S_half (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000012516067446, guid: 32c4edf4f02ad254092a6e1ba94f5b4e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4000010482363180, guid: 32c4edf4f02ad254092a6e1ba94f5b4e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -9889,6 +10196,18 @@ PrefabInstance:
     - target: {fileID: 1000013039883512, guid: fee6e1da33beae9409089ab8a832464f, type: 3}
       propertyPath: m_Name
       value: Concrete_fence_v2_S (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000013039883512, guid: fee6e1da33beae9409089ab8a832464f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000013693227596, guid: fee6e1da33beae9409089ab8a832464f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000014037010034, guid: fee6e1da33beae9409089ab8a832464f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4000010230679374, guid: fee6e1da33beae9409089ab8a832464f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -10146,6 +10465,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Concrete_fence_v2_L (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 1000010445383670, guid: aca4c3cf28c5f5a428fb19299881807f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000011211479386, guid: aca4c3cf28c5f5a428fb19299881807f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000012361127368, guid: aca4c3cf28c5f5a428fb19299881807f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 4000010737657962, guid: aca4c3cf28c5f5a428fb19299881807f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 25.593864
@@ -10186,10 +10517,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 64000010413768088, guid: aca4c3cf28c5f5a428fb19299881807f, type: 3}
+    - {fileID: 64000011381781962, guid: aca4c3cf28c5f5a428fb19299881807f, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1000011211479386, guid: aca4c3cf28c5f5a428fb19299881807f,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 66769084}
   m_SourcePrefab: {fileID: 100100000, guid: aca4c3cf28c5f5a428fb19299881807f, type: 3}
 --- !u!4 &1751127776 stripped
 Transform:
@@ -10197,6 +10534,27 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1794147463}
   m_PrefabAsset: {fileID: 0}
+--- !u!65 &1751127780
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519204760}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2.246357, y: 2.9944706, z: 2.2456346}
+  m_Center: {x: -0.000000059604645, y: 0.000000059604645, z: -0.00000023841858}
 --- !u!1001 &1764103261
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10339,6 +10697,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Concrete_fence_v2_L (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1000010445383670, guid: aca4c3cf28c5f5a428fb19299881807f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000011211479386, guid: aca4c3cf28c5f5a428fb19299881807f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000012361127368, guid: aca4c3cf28c5f5a428fb19299881807f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 4000010737657962, guid: aca4c3cf28c5f5a428fb19299881807f, type: 3}
       propertyPath: m_LocalPosition.x
       value: -36.42429
@@ -10390,6 +10760,27 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1574243029}
   m_PrefabAsset: {fileID: 0}
+--- !u!65 &1790138181
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1392246458}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 5.457814, y: 4.4117274, z: 8.250483}
+  m_Center: {x: 0.00005865097, y: -0.00001692772, z: 0.00001692772}
 --- !u!1001 &1792760253
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10474,7 +10865,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1793622490
 Transform:
@@ -10561,6 +10952,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Concrete_fence_v1_L2
       objectReference: {fileID: 0}
+    - target: {fileID: 1000010153590016, guid: 21cd13e1bef6c4d49b6a39c0979ddb31, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 4000013211777290, guid: 21cd13e1bef6c4d49b6a39c0979ddb31, type: 3}
       propertyPath: m_LocalPosition.x
       value: 12.5544405
@@ -10601,10 +10996,15 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 64000012992004102, guid: 21cd13e1bef6c4d49b6a39c0979ddb31, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1000010153590016, guid: 21cd13e1bef6c4d49b6a39c0979ddb31,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1751127780}
   m_SourcePrefab: {fileID: 100100000, guid: 21cd13e1bef6c4d49b6a39c0979ddb31, type: 3}
 --- !u!1001 &1799724390
 PrefabInstance:
@@ -10757,10 +11157,25 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 211616017}
     m_Modifications:
+    - target: {fileID: 51058566653343261, guid: a1640f2c97a1e49cf8177d281ca76bac,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 337250569400842638, guid: a1640f2c97a1e49cf8177d281ca76bac,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 896101949215514370, guid: a1640f2c97a1e49cf8177d281ca76bac,
         type: 3}
       propertyPath: m_Name
       value: RifleView
+      objectReference: {fileID: 0}
+    - target: {fileID: 896101949215514370, guid: a1640f2c97a1e49cf8177d281ca76bac,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 1649845289359015601, guid: a1640f2c97a1e49cf8177d281ca76bac,
         type: 3}
@@ -10812,6 +11227,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3445271686980419365, guid: a1640f2c97a1e49cf8177d281ca76bac,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 3914966272865477167, guid: a1640f2c97a1e49cf8177d281ca76bac,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 4335536769682460222, guid: a1640f2c97a1e49cf8177d281ca76bac,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 6212968318080323214, guid: a1640f2c97a1e49cf8177d281ca76bac,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10840,6 +11275,18 @@ PrefabInstance:
     - target: {fileID: 1000013039883512, guid: fee6e1da33beae9409089ab8a832464f, type: 3}
       propertyPath: m_Name
       value: Concrete_fence_v2_S (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000013039883512, guid: fee6e1da33beae9409089ab8a832464f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000013693227596, guid: fee6e1da33beae9409089ab8a832464f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000014037010034, guid: fee6e1da33beae9409089ab8a832464f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4000010230679374, guid: fee6e1da33beae9409089ab8a832464f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -10903,6 +11350,10 @@ PrefabInstance:
     - target: {fileID: 1000012006241372, guid: 6d21e769def7d504ea22abcb06173633, type: 3}
       propertyPath: m_Name
       value: Bags_on_pallet_v1_1 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000012006241372, guid: 6d21e769def7d504ea22abcb06173633, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4000012000326308, guid: 6d21e769def7d504ea22abcb06173633, type: 3}
       propertyPath: m_LocalPosition.x
@@ -11160,6 +11611,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Hangar_v1_full (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1000013721592950, guid: 95c00f442e3cf3643b2062e8e0d0bbd6, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 4000013703715314, guid: 95c00f442e3cf3643b2062e8e0d0bbd6, type: 3}
       propertyPath: m_LocalPosition.x
       value: -7.0455604
@@ -11200,10 +11655,15 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 64000011546560374, guid: 95c00f442e3cf3643b2062e8e0d0bbd6, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1000013721592950, guid: 95c00f442e3cf3643b2062e8e0d0bbd6,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2139370775}
   m_SourcePrefab: {fileID: 100100000, guid: 95c00f442e3cf3643b2062e8e0d0bbd6, type: 3}
 --- !u!1001 &1963141106
 PrefabInstance:
@@ -11213,10 +11673,25 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 990753086}
     m_Modifications:
+    - target: {fileID: 51058566653343261, guid: 07ccf6ebaf5a541448f86d394688b3f5,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 337250569400842638, guid: 07ccf6ebaf5a541448f86d394688b3f5,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 896101949215514370, guid: 07ccf6ebaf5a541448f86d394688b3f5,
         type: 3}
       propertyPath: m_Name
       value: ShotgunView
+      objectReference: {fileID: 0}
+    - target: {fileID: 896101949215514370, guid: 07ccf6ebaf5a541448f86d394688b3f5,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 1649845289359015601, guid: 07ccf6ebaf5a541448f86d394688b3f5,
         type: 3}
@@ -11268,6 +11743,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3445271686980419365, guid: 07ccf6ebaf5a541448f86d394688b3f5,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 3914966272865477167, guid: 07ccf6ebaf5a541448f86d394688b3f5,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 4335536769682460222, guid: 07ccf6ebaf5a541448f86d394688b3f5,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 6212968318080323214, guid: 07ccf6ebaf5a541448f86d394688b3f5,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11296,6 +11791,10 @@ PrefabInstance:
     - target: {fileID: 1000010628347772, guid: 46132fa6877a42947bf1f7f15c09f435, type: 3}
       propertyPath: m_Name
       value: Generator_v1 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000010628347772, guid: 46132fa6877a42947bf1f7f15c09f435, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4000012999968834, guid: 46132fa6877a42947bf1f7f15c09f435, type: 3}
       propertyPath: m_LocalPosition.x
@@ -11475,50 +11974,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -267.501
       objectReference: {fileID: 0}
-    - target: {fileID: 3599180224555674520, guid: 921f157814f75d84080b421e91acc06a,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
-    - target: {fileID: 3922365219395681879, guid: 921f157814f75d84080b421e91acc06a,
-        type: 3}
-      propertyPath: m_Color.b
-      value: 0.6745098
-      objectReference: {fileID: 0}
-    - target: {fileID: 3922365219395681879, guid: 921f157814f75d84080b421e91acc06a,
-        type: 3}
-      propertyPath: m_Color.g
-      value: 0.9137255
-      objectReference: {fileID: 0}
-    - target: {fileID: 3922365219395681879, guid: 921f157814f75d84080b421e91acc06a,
-        type: 3}
-      propertyPath: m_Intensity
-      value: 30
-      objectReference: {fileID: 0}
-    - target: {fileID: 3922365219395681879, guid: 921f157814f75d84080b421e91acc06a,
-        type: 3}
-      propertyPath: m_Lightmapping
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3922365219395681879, guid: 921f157814f75d84080b421e91acc06a,
-        type: 3}
-      propertyPath: m_Shadows.m_Type
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4544621869252912049, guid: 921f157814f75d84080b421e91acc06a,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
     - target: {fileID: 6470658264156812115, guid: 921f157814f75d84080b421e91acc06a,
         type: 3}
       propertyPath: m_Name
       value: Spot Light (12)
-      objectReference: {fileID: 0}
-    - target: {fileID: 6470658264156812115, guid: 921f157814f75d84080b421e91acc06a,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -11531,6 +11990,33 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1991684602}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1992539567 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1000014215199998, guid: 60cf315f432990a41b67cef3d41a92f4,
+    type: 3}
+  m_PrefabInstance: {fileID: 138752746}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &1992539573
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1992539567}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.538051, y: 3.2456713, z: 0.61357737}
+  m_Center: {x: 0, y: 0.00000011920929, z: 2.59}
 --- !u!1 &1994407939
 GameObject:
   m_ObjectHideFlags: 0
@@ -11582,7 +12068,7 @@ Camera:
     width: 1
     height: 1
   near clip plane: 0.3
-  far clip plane: 1000
+  far clip plane: 50
   field of view: 60
   orthographic: 0
   orthographic size: 5
@@ -11816,6 +12302,133 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 2033928153}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2036708577
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2036708578}
+  - component: {fileID: 2036708580}
+  - component: {fileID: 2036708579}
+  m_Layer: 0
+  m_Name: Directional Light
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2036708578
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2036708577}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.63998294, y: -0.065412894, z: 0.03381605, w: 0.76485264}
+  m_LocalPosition: {x: 0, y: 7.51, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 677382313}
+  m_LocalEulerAnglesHint: {x: 79.549, y: -18.24, z: -10.16}
+--- !u!114 &2036708579
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2036708577}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.RenderPipelines.Universal.Runtime::UnityEngine.Rendering.Universal.UniversalAdditionalLightData
+  m_UsePipelineSettings: 1
+  m_AdditionalLightsShadowResolutionTier: 2
+  m_CustomShadowLayers: 0
+  m_LightCookieSize: {x: 1, y: 1}
+  m_LightCookieOffset: {x: 0, y: 0}
+  m_SoftShadowQuality: 0
+  m_RenderingLayersMask:
+    serializedVersion: 0
+    m_Bits: 1
+  m_ShadowRenderingLayersMask:
+    serializedVersion: 0
+    m_Bits: 1
+  m_Version: 4
+  m_LightLayerMask: 1
+  m_ShadowLayerMask: 1
+  m_RenderingLayers: 1
+  m_ShadowRenderingLayers: 1
+--- !u!108 &2036708580
+Light:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2036708577}
+  m_Enabled: 1
+  serializedVersion: 12
+  m_Type: 1
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Intensity: 0.4
+  m_Range: 10
+  m_SpotAngle: 30
+  m_InnerSpotAngle: 21.80208
+  m_CookieSize2D: {x: 0.5, y: 0.5}
+  m_Shadows:
+    m_Type: 1
+    m_Resolution: -1
+    m_CustomResolution: -1
+    m_Strength: 1
+    m_Bias: 0.05
+    m_NormalBias: 0.4
+    m_NearPlane: 0.2
+    m_CullingMatrixOverride:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    m_UseCullingMatrixOverride: 0
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingLayerMask: 1
+  m_Lightmapping: 2
+  m_LightShadowCasterMode: 0
+  m_AreaSize: {x: 1, y: 1}
+  m_BounceIntensity: 1
+  m_ColorTemperature: 6570
+  m_UseColorTemperature: 0
+  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_UseBoundingSphereOverride: 0
+  m_UseViewFrustumForShadowCasterCull: 1
+  m_ForceVisible: 0
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
+  m_LightUnit: 1
+  m_LuxAtDistance: 1
+  m_EnableSpotReflector: 1
 --- !u!1001 &2038263261
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11827,6 +12440,10 @@ PrefabInstance:
     - target: {fileID: 1000010628347772, guid: 46132fa6877a42947bf1f7f15c09f435, type: 3}
       propertyPath: m_Name
       value: Generator_v1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000010628347772, guid: 46132fa6877a42947bf1f7f15c09f435, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4000012999968834, guid: 46132fa6877a42947bf1f7f15c09f435, type: 3}
       propertyPath: m_LocalPosition.x
@@ -11884,6 +12501,10 @@ PrefabInstance:
     - target: {fileID: 1000010619805496, guid: 395dcd74773407e4faa9906eedf6f75d, type: 3}
       propertyPath: m_Name
       value: Wooden_box_v1_LD2square (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000010619805496, guid: 395dcd74773407e4faa9906eedf6f75d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4000010570413510, guid: 395dcd74773407e4faa9906eedf6f75d, type: 3}
       propertyPath: m_LocalScale.x
@@ -11970,6 +12591,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Concrete_fence_v2_L (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 1000010445383670, guid: aca4c3cf28c5f5a428fb19299881807f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000011211479386, guid: aca4c3cf28c5f5a428fb19299881807f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000012361127368, guid: aca4c3cf28c5f5a428fb19299881807f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 4000010737657962, guid: aca4c3cf28c5f5a428fb19299881807f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 23.02665
@@ -12027,6 +12660,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Road_block_v1 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1000012744991898, guid: 36667f34d4b750c4695e409fb89b51f8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 4000012564366324, guid: 36667f34d4b750c4695e409fb89b51f8, type: 3}
       propertyPath: m_LocalPosition.x
       value: -14.345222
@@ -12083,6 +12720,18 @@ PrefabInstance:
     - target: {fileID: 1000013039883512, guid: fee6e1da33beae9409089ab8a832464f, type: 3}
       propertyPath: m_Name
       value: Concrete_fence_v2_S
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000013039883512, guid: fee6e1da33beae9409089ab8a832464f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000013693227596, guid: fee6e1da33beae9409089ab8a832464f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000014037010034, guid: fee6e1da33beae9409089ab8a832464f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4000010230679374, guid: fee6e1da33beae9409089ab8a832464f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -12203,6 +12852,27 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 114970962}
   m_PrefabAsset: {fileID: 0}
+--- !u!65 &2075004977
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 821930487}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.7406738, y: 5.1842904, z: 1.7142303}
+  m_Center: {x: -0.000001847744, y: -0.013386011, z: -0.0000011026859}
 --- !u!1001 &2092039933
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12214,6 +12884,10 @@ PrefabInstance:
     - target: {fileID: 1000014012932500, guid: 94a643c50b8c98e488ed29457fc57cb6, type: 3}
       propertyPath: m_Name
       value: Dumpsters_v1_empty
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000014012932500, guid: 94a643c50b8c98e488ed29457fc57cb6, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4000012445243036, guid: 94a643c50b8c98e488ed29457fc57cb6, type: 3}
       propertyPath: m_LocalScale.x
@@ -12282,6 +12956,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cargo_container_v1_LD1close (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1000011523426384, guid: 84147b87204d0a0478bae9558d656ea2, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 4000011048348644, guid: 84147b87204d0a0478bae9558d656ea2, type: 3}
       propertyPath: m_LocalPosition.x
       value: -35.33556
@@ -12327,6 +13005,82 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 84147b87204d0a0478bae9558d656ea2, type: 3}
+--- !u!1 &2120149613
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2120149615}
+  - component: {fileID: 2120149614}
+  m_Layer: 0
+  m_Name: Adaptive Probe Volume
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2120149614
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2120149613}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cded085d155cde949b60f67a11dbc3bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.RenderPipelines.Core.Runtime::UnityEngine.Rendering.ProbeVolume
+  mode: 2
+  size: {x: 121, y: 14.032196, z: 121}
+  overrideRendererFilters: 0
+  minRendererVolumeSize: 0.1
+  objectLayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  lowestSubdivLevelOverride: 0
+  highestSubdivLevelOverride: 7
+  overridesSubdivLevels: 0
+  mightNeedRebaking: 0
+  cachedTransform:
+    e00: 1
+    e01: 0
+    e02: 0
+    e03: 10
+    e10: 0
+    e11: 1
+    e12: 0
+    e13: -6.3662887
+    e20: 0
+    e21: 0
+    e22: 1
+    e23: 10
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 1
+  cachedHashCode: 1391445650
+  fillEmptySpaces: 0
+  version: 2
+  globalVolume: 0
+--- !u!4 &2120149615
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2120149613}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -10, y: 6.3662887, z: -10}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &2132770846 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4000010570413510, guid: 395dcd74773407e4faa9906eedf6f75d,
@@ -12339,6 +13093,27 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1959037028}
   m_PrefabAsset: {fileID: 0}
+--- !u!65 &2139370775
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 976465273}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 9.669912, y: 5.0289836, z: 7.1973133}
+  m_Center: {x: 0.0000028610234, y: 0.00000023841858, z: -0.00000023841858}
 --- !u!1001 &8943681911956855723
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12422,3 +13197,5 @@ SceneRoots:
   - {fileID: 211616017}
   - {fileID: 677382313}
   - {fileID: 1540052558}
+  - {fileID: 2120149615}
+  - {fileID: 1535172073}

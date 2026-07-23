@@ -78,8 +78,10 @@ MonoBehaviour:
       - rid: 3416372326306676871
       - rid: 3416372326306676872
       - rid: 3416372326306676873
+      - rid: 3416372326306676874
       - rid: 3416372326306676876
       - rid: 3416372326306676877
+      - rid: 3416372326306676879
   m_AssetVersion: 9
   m_ObsoleteDefaultVolumeProfile: {fileID: 0}
   m_RenderingLayerNames:

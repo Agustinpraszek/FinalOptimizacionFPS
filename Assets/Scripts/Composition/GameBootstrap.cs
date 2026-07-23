@@ -87,6 +87,7 @@ public sealed class GameBootstrap : MonoBehaviour
     {
         _vfx.Play(_config.Vfx?.MuzzleFlash, origin, direction);
         _recoil.AddKick(_weaponSystem.CurrentWeapon.Recoil);
+        _weaponView.PlayFire();
     }
 
     private void BuildEnemySide(IDamageableRegistry registry)
