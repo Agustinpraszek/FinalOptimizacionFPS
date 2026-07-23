@@ -29,8 +29,8 @@ MonoBehaviour:
       serializedVersion: 2
       m_Bits: 64
   Vfx:
-    Impact: {fileID: 0}
-    EnemyDeath: {fileID: 0}
+    Impact: {fileID: 11400000, guid: 39bcf2d066ff4cd46a3343b48a08b334, type: 2}
+    EnemyDeath: {fileID: 11400000, guid: 74395897d0d53f543b8ca2f45c346543, type: 2}
     MuzzleFlash: {fileID: 0}
   StartingMoney: 1000
   Shop:

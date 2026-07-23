@@ -9,6 +9,7 @@ public sealed class Projectile : IUpdatable, IPooledView
 {
     private readonly GameObject _gameObject;
     private readonly Transform _transform;
+    private readonly TrailRenderer _trailRenderer;
     private readonly RaycastHit[] _hitBuffer = new RaycastHit[4];
 
     private ProjectileConfig _config;
@@ -27,6 +28,7 @@ public sealed class Projectile : IUpdatable, IPooledView
     {
         _gameObject = gameObject;
         _transform = gameObject.transform;
+        _trailRenderer = gameObject.GetComponentInChildren<TrailRenderer>();
     }
 
     public void Spawn(Vector3 position, Vector3 direction, in ProjectileConfig config)
@@ -39,6 +41,12 @@ public sealed class Projectile : IUpdatable, IPooledView
         _active = true;
 
         _transform.SetPositionAndRotation(position, Quaternion.LookRotation(direction));
+
+        if (_trailRenderer != null)
+        {
+            _trailRenderer.Clear();
+            _trailRenderer.emitting = true;
+        }
     }
 
     public void Tick(float deltaTime)
@@ -48,7 +56,7 @@ public sealed class Projectile : IUpdatable, IPooledView
         _remainingLifetime -= deltaTime;
         if (_remainingLifetime <= 0f)
         {
-            _active = false;
+            Deactivate();
             return;
         }
 
@@ -82,7 +90,17 @@ public sealed class Projectile : IUpdatable, IPooledView
         HitPoint = hit.point;
         HitNormal = hit.normal;
         _transform.position = origin + direction * hit.distance;
-        _active = false;
+
+        Deactivate();
         return true;
+    }
+
+    private void Deactivate()
+    {
+        _active = false;
+        if (_trailRenderer != null)
+        {
+            _trailRenderer.emitting = false;
+        }
     }
 }

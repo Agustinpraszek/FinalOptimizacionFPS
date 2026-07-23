@@ -106,7 +106,7 @@ public sealed class Zombie : IEnemy
             _animator.speed = 0f;
         }
 
-        if (_rigidbody != null)
+        if (_rigidbody != null && !_rigidbody.isKinematic)
         {
             _rigidbody.linearVelocity = Vector3.zero;
             _rigidbody.angularVelocity = Vector3.zero;
