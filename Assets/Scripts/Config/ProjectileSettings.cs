@@ -9,7 +9,6 @@ public sealed class ProjectileSettings
     public GameObject Prefab;
 
     [Min(1)] public int PrewarmCount = 64;
-    [Min(0.01f)] public float Radius = 0.1f;
 
     [Tooltip("Capas contra las que impacta. Tiene que excluir al jugador y al arma.")]
     public LayerMask HitMask = ~0;

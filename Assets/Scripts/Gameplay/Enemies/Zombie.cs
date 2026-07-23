@@ -15,6 +15,14 @@ public sealed class Zombie : IEnemy
     private float _reachRadius;
     private bool _active;
 
+    // Posición "intención" propia, independiente de _transform.position.
+    // Rigidbody.MovePosition en un cuerpo kinematic no mueve nada hasta el
+    // próximo step de física, así que si Tick corre más de una vez entre steps
+    // (Update va más rápido que el physics step, algo común bajo carga), leer
+    // _transform.position de nuevo cada vez pisa el pedido anterior en vez de
+    // sumarse a él y el zombie avanza mucho menos de lo que debería.
+    private Vector3 _currentPosition;
+
     public GameObject GameObject => _gameObject;
     public bool IsAlive => _active && _health.IsAlive;
     public bool IsFinished => !_active;
@@ -36,6 +44,12 @@ public sealed class Zombie : IEnemy
         EnemyData data = context.Data;
 
         _transform.position = context.Position;
+        _currentPosition = context.Position;
+
+        // Sincroniza el Rigidbody con el teleport del pool: MovePosition interpola,
+        // así que sin esto el zombie arrastra visualmente desde donde murió antes.
+        if (_rigidbody != null) _rigidbody.position = context.Position;
+
         _target = context.Target;
         _speed = data.MoveSpeed + context.SpeedBonus;
         _reachRadius = data.ReachRadius;
@@ -74,8 +88,7 @@ public sealed class Zombie : IEnemy
             _animator.speed = 1f;
         }
 
-        Vector3 position = _transform.position;
-        Vector3 toTarget = _target.position - position;
+        Vector3 toTarget = _target.position - _currentPosition;
         toTarget.y = 0f;
 
         float distance = toTarget.magnitude;
@@ -94,8 +107,11 @@ public sealed class Zombie : IEnemy
         }
 
         toTarget /= distance; // normaliza sin recalcular la magnitud
-        Vector3 newPosition = position + toTarget * (_speed * deltaTime);
-        _rigidbody.MovePosition(newPosition);
+        _currentPosition += toTarget * (_speed * deltaTime);
+
+        if (_rigidbody != null) _rigidbody.MovePosition(_currentPosition);
+        else _transform.position = _currentPosition; // fallback si falta el Rigidbody
+
         _transform.forward = toTarget;
     }
 

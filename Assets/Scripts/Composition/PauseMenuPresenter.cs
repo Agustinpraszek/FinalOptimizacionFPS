@@ -43,11 +43,9 @@ public sealed class PauseMenuPresenter : IUpdatable
         _isPaused = true;
         _updateManager.SetPaused(true);
 
-        // Pausa todos los animators de la escena
-        foreach (Animator animator in Object.FindObjectsByType<Animator>(FindObjectsSortMode.None))
-        {
-            animator.speed = 0f;
-        }
+        // Congela Animators, Physics y ParticleSystems de toda la escena sin
+        // buscar nada: Time.timeScale = 0 los frena a todos por su cuenta.
+        Time.timeScale = 0f;
 
         if (_references.Panel != null) _references.Panel.SetActive(true);
 
@@ -60,11 +58,7 @@ public sealed class PauseMenuPresenter : IUpdatable
         _isPaused = false;
         _updateManager.SetPaused(false);
 
-        // Reanuda los animators
-        foreach (Animator animator in Object.FindObjectsByType<Animator>(FindObjectsSortMode.None))
-        {
-            animator.speed = 1f;
-        }
+        Time.timeScale = 1f;
 
         if (_references.Panel != null) _references.Panel.SetActive(false);
 
@@ -75,6 +69,7 @@ public sealed class PauseMenuPresenter : IUpdatable
     private void GoToMainMenu()
     {
         _updateManager.SetPaused(false);
+        Time.timeScale = 1f; // si no se resetea acá, la escena del menú carga congelada
         UnityEngine.SceneManagement.SceneManager.LoadScene(_mainMenuSceneName);
     }
 

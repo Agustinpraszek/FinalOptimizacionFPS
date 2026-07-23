@@ -14,6 +14,10 @@ public sealed class MainMenuPresenter
         _btnQuit = btnQuit;
         _targetSceneName = targetSceneName;
 
+        // Por si se llegó acá con el juego pausado (timeScale en 0): el menú
+        // nunca debe arrancar congelado, sin importar desde dónde se cargó.
+        Time.timeScale = 1f;
+
         // Forzar visibilidad y desbloqueo del cursor para el menu
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;

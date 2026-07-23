@@ -24,7 +24,6 @@ MonoBehaviour:
     Prefab: {fileID: 7280164107709646437, guid: 5d7d8f750c01bef4a98bee60f1dcea81,
       type: 3}
     PrewarmCount: 64
-    Radius: 0.1
     HitMask:
       serializedVersion: 2
       m_Bits: 64
@@ -37,4 +36,4 @@ MonoBehaviour:
     InteractDistance: 3.5
     InteractMask:
       serializedVersion: 2
-      m_Bits: 6263
+      m_Bits: 128

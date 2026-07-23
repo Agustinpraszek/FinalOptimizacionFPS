@@ -28,8 +28,6 @@ public sealed class GameBootstrap : MonoBehaviour
     {
         if (!Validate()) return;
 
-        Application.targetFrameRate = 60;
-
         _updateManager = new GameObject("UpdateManager").AddComponent<UpdateManager>();
 
         var registry = new DamageableRegistry();
@@ -44,7 +42,7 @@ public sealed class GameBootstrap : MonoBehaviour
         _economy = new EconomyService(_config.StartingMoney);
 
         // Los VFX son opcionales: acá solo se avisa qué falta, no se aborta.
-        _config.Vfx?.LogMissing(this);
+        //_config.Vfx?.LogMissing(this);
         _vfx = new VfxSystem(new GameObject("VfxPool").transform, _updateManager, _config.Vfx);
 
         BuildEnemySide(registry);
@@ -152,8 +150,7 @@ public sealed class GameBootstrap : MonoBehaviour
             player.CameraPivot,
             _projectileSystem,
             _config.Weapons,
-            projectiles.HitMask,
-            projectiles.Radius);
+            projectiles.HitMask);
 
         _weaponView = new WeaponViewBinder(player.WeaponPivot, _config.Weapons);
         _recoil = new WeaponRecoilSystem(player.WeaponPivot);

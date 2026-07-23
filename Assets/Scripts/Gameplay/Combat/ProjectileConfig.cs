@@ -5,15 +5,13 @@ using UnityEngine;
 public readonly struct ProjectileConfig
 {
     public readonly float Speed;
-    public readonly float Radius;
     public readonly float Lifetime;
     public readonly int Damage;
     public readonly LayerMask HitMask;
 
-    public ProjectileConfig(float speed, float radius, float lifetime, int damage, LayerMask hitMask)
+    public ProjectileConfig(float speed, float lifetime, int damage, LayerMask hitMask)
     {
         Speed = speed;
-        Radius = radius;
         Lifetime = lifetime;
         Damage = damage;
         HitMask = hitMask;

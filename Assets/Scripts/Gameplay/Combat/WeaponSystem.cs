@@ -18,7 +18,6 @@ public sealed class WeaponSystem : IUpdatable
     private readonly IReadOnlyList<WeaponData> _weapons;
     private readonly bool[] _owned;
     private readonly LayerMask _hitMask;
-    private readonly float _projectileRadius;
 
     private int _currentIndex;
     private float _cooldown;
@@ -35,15 +34,13 @@ public sealed class WeaponSystem : IUpdatable
         Transform aimPivot,
         ProjectileSystem projectileSystem,
         IReadOnlyList<WeaponData> weapons,
-        LayerMask hitMask,
-        float projectileRadius)
+        LayerMask hitMask)
     {
         _shootPoint = shootPoint;
         _aimPivot = aimPivot;
         _projectileSystem = projectileSystem;
         _weapons = weapons;
         _hitMask = hitMask;
-        _projectileRadius = projectileRadius;
 
         // La primera arma de la lista viene desbloqueada.
         _owned = new bool[weapons.Count];
@@ -111,7 +108,6 @@ public sealed class WeaponSystem : IUpdatable
 
         var config = new ProjectileConfig(
             weapon.ProjectileSpeed,
-            _projectileRadius,
             weapon.ProjectileLifetime,
             weapon.Damage,
             _hitMask);
