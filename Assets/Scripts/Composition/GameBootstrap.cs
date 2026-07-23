@@ -21,10 +21,14 @@ public sealed class GameBootstrap : MonoBehaviour
     private ShopSystem _shop;
     private VfxSystem _vfx;
     private HudPresenter _hud;
+    private MainMenuPresenter _mainMenu;
+    private PauseMenuPresenter _pauseMenu;
 
     private void Awake()
     {
         if (!Validate()) return;
+
+        Application.targetFrameRate = 60;
 
         _updateManager = new GameObject("UpdateManager").AddComponent<UpdateManager>();
 
@@ -32,6 +36,10 @@ public sealed class GameBootstrap : MonoBehaviour
 
         _gameFlow = new GameFlowSystem(_updateManager);
         _updateManager.Register(_gameFlow, UpdateChannel.Always);
+
+        BuildMainMenu();
+
+        if (_sceneReferences.Player.Body == null) return;
 
         _economy = new EconomyService(_config.StartingMoney);
 
@@ -43,6 +51,7 @@ public sealed class GameBootstrap : MonoBehaviour
         BuildCombatSide(registry);
         BuildShop();
         BuildHud();
+        BuildPauseMenu();
         WireEvents();
 
         // El orden de registro es el orden de ejecución del loop.
@@ -88,6 +97,23 @@ public sealed class GameBootstrap : MonoBehaviour
         _vfx.Play(_config.Vfx?.MuzzleFlash, origin, direction);
         _recoil.AddKick(_weaponSystem.CurrentWeapon.Recoil);
         _weaponView.PlayFire();
+    }
+
+    private void BuildMainMenu()
+    {
+        MainMenuReferences menuRefs = _sceneReferences.MainMenu;
+        if (menuRefs.BtnStart == null) return;
+
+        _mainMenu = new MainMenuPresenter(menuRefs.BtnStart, menuRefs.BtnQuit, "Scene 2");
+    }
+
+    private void BuildPauseMenu()
+    {
+        PauseMenuReferences pauseRefs = _sceneReferences.PauseMenu;
+        if (pauseRefs.Panel == null) return;
+
+        _pauseMenu = new PauseMenuPresenter(pauseRefs, _updateManager, "MainMenu");
+        _updateManager.Register(_pauseMenu, UpdateChannel.Always);
     }
 
     private void BuildEnemySide(IDamageableRegistry registry)
@@ -197,6 +223,9 @@ public sealed class GameBootstrap : MonoBehaviour
 
     private void OnDestroy()
     {
+        _mainMenu?.Dispose();
+        _pauseMenu?.Dispose();
+
         if (_waveManager == null || _playerLogic == null) return;
 
         _waveManager.OnPlayerReached -= _playerLogic.TakeDamage;
@@ -239,7 +268,7 @@ public sealed class GameBootstrap : MonoBehaviour
             return false;
         }
 
-        if (!_sceneReferences.Player.IsValid(out string playerError))
+        if (_sceneReferences.Player.Body != null && !_sceneReferences.Player.IsValid(out string playerError))
         {
             Debug.LogError($"[Bootstrap] {playerError}", this);
             return false;
